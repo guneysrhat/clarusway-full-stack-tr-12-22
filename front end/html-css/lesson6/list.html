@@ -6,6 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List</title>
+    <style>
+        ul {
+            /* padding-left: 5px; */
+            list-style: none;
+        }
+
+        .item {
+            /* list-style-type: georgian; */
+            /* list-style-type: outside; */
+            list-style-type: "⭕";
+        }
+
+        /* li::before {
+            content: "\2764";
+            color: tomato;
+            padding-right: 10px;
+        } */
+
+        ol {
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        ol li {
+            border: 1px solid darkorange;
+            border-radius: 25px;
+            margin: 10px;
+            padding-left: 1rem;
+            background-color: lightgreen;
+            border-left: 7px solid grey;
+            color: brown;
+            width: 15rem;
+            /* display: inline; */
+        }
+    </style>
 </head>
 
 <body>
@@ -14,8 +50,15 @@
         <li class="item item2">item2</li>
         <li class="item item3">item3</li>
         <li class="item item4">item4</li>
+        <li class="item item5">item5</li>
     </ul>
-
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ol>
 </body>
 
 </html>
