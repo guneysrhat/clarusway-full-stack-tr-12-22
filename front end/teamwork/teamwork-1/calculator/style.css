@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+.calc {
+    width: 25rem;
+    background-color: rgb(66, 64, 64);
+    height: 77vh;
+    margin: 3rem auto 0 auto;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+#resultArea {
+    width: 93%;
+    background-color: rgb(24, 24, 24);
+    margin: 1rem auto 0 auto;
+    border-radius: 1rem 1rem 0 0;
+    align-items: flex-end;
+    padding-right: .6rem;
+    height: 25%;
+}
+
+#previousArea {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+    align-items: flex-end;
+    height: 40%;
+}
+
+#currentArea {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    align-items: flex-end;
+    height: 60%;
+}
+
+#operationArea {
+    width: 100%;
+    height: 70%;
+
+}
+
+table {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    margin-top: .2rem;
+    border-spacing: .1rem;
+}
+
+td {
+    width: 25%;
+    text-align: center;
+    background-color: rgb(53, 51, 51);
+    cursor: pointer;
+}
+
+td:hover {
+    color: black;
+    background-color: rgb(190, 188, 188);
+    transition: ease-in-out .4s;
+    border-radius: .7rem;
+
+}
+
+.operationButtons {
+    background-color: orange;
+}
+
+.operationButtons:hover {
+    background-color: rgb(221, 194, 145);
+}
+
+.selector {
+    background-color: grey;
+}
+
+.selector:hover {
+    background-color: rgb(241, 241, 241);
+}

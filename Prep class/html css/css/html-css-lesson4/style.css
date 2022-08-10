@@ -1,0 +1,43 @@
+* {
+    margin: 20px;
+    padding: 0px;
+}
+
+#paragraf1 {
+    background-color: chartreuse;
+}
+
+#paragraf2 {
+    background-color: crimson;
+}
+
+#paragraf3 {
+    background-color: blueviolet;
+}
+
+.ortak {
+    background-color: burlywood;
+}
+
+#id3 {
+    background-color: aqua;
+    border: 5px dotted blue;
+
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: blue; */
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+}
+
+.container {
+    border: 2px solid red;
+    padding: 20px;
+}
+
+#last {
+    background-color: darkgoldenrod;
+    padding: inherit;
+}

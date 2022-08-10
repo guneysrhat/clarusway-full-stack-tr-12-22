@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: aquamarine;
+    /* margin-bottom: 0; */
+    padding: 20px 40px;
+    margin-top: 100px;
+}
+
+#par1 {
+
+    /* border: 50px solid blue; */
+    background-color: coral;
+    /* margin-top: 0; */
+    width: 250px;
+    height: 150px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#par2 {
+    background-color: cornflowerblue;
+    /* margin: inherit; */
+    /* margin-top: -80px; */
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.container {
+    border: 2px solid red;
+    margin: 40px;
+    background-color: bisque;
+    padding: 5px;
+}

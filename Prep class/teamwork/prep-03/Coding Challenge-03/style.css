@@ -1,0 +1,137 @@
+body {
+    background-color: #f2e9fe;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #453478;
+    font-size: 50px;
+    text-align: center;
+}
+
+.image {
+
+    text-align: center;
+    margin-bottom: 35px;
+
+}
+
+.main {
+    background-color: #764dd4;
+    border: 1px solid #764dd4;
+    border-radius: 9px;
+    padding: 35px;
+    color: white;
+    text-align: left;
+    width: 65%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+li {
+    margin: .7rem 0;
+}
+
+.yellow {
+    color: #d2b9cd;
+    border-left: 4px solid orange;
+    padding-left: .7rem;
+}
+
+span {
+    background-color: #fcedb3;
+    color: black;
+    border-radius: 4px;
+}
+
+/* .download {
+    text-align: center;
+    background-color: #f5c73f;
+    margin-top: 75px;
+
+} */
+
+.footer {
+    text-align: center;
+}
+
+a {
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(249, 202, 36);
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    border: 4px solid black;
+}
+
+a:hover {
+    background-color: rgb(230, 202, 36);
+    border: 4px solid rgb(53, 52, 52);
+}
+
+/* body{
+    background-color: rgb(178, 126, 226);
+}
+.div{
+    color: rgb(23, 23, 116);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.img{
+   width: 35%;
+}
+.div2{
+    background-color: blue;
+    width: 85%;
+    margin: auto;
+    border-radius: .7rem;
+    padding: 1rem ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+ul{
+    list-style-type: none;
+    margin-left: -2.1rem;
+}
+li{
+    margin: .7rem 0;
+}
+.sekilli{
+    border-left: 3PX solid orange;
+    color: yellow;
+    padding-left: .7rem;
+}
+.sekilsiz{
+    padding-left: .7rem;
+}
+span{
+    background-color: orange;
+    color: black;
+}
+a {
+    border: 1px solid black;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(249, 202, 36);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 45%;
+}
+a:hover {
+    background-color: red;
+}
+footer{
+    text-align: center;
+} */

@@ -1,0 +1,41 @@
+* {
+    /* margin: 0; */
+    padding: 2px;
+}
+
+body {
+    padding: 2px;
+}
+
+.container {
+    background-color: darkorange;
+    margin: 50px;
+    padding: 2px;
+}
+
+.box1 {
+    background-color: rgba(255, 0, 0, 0.535);
+    padding: 2px;
+}
+
+.box2 {
+    background-color: rgba(172, 255, 47, 0.474);
+    border: 3px solid blue;
+    /* margin: inherit; */
+    margin-top: -0px;
+    padding: 2px;
+    /* width: 200px; */
+
+
+}
+
+.box3 {
+    background-color: magenta;
+    /* margin-top: 20px; */
+    padding: 2px;
+}
+
+.box4 {
+    background-color: cyan;
+    padding: 2px;
+}

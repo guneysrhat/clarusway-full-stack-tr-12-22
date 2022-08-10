@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url(./img/background_image.jpg);
+    color: white;
+    background-size: cover;
+}
+
+.container {
+
+    width: 98%;
+    margin: 3rem auto 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    text-align: center;
+
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+span {
+    color: red;
+}
+
+.discription {
+    font-size: 1.5rem;
+}
+
+.surverFormContainer {
+
+    width: 35%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.83);
+}
+
+.surveyForm {
+
+    width: 90%;
+    margin: auto;
+}
+
+.inputBox {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#name,
+#age,
+#email,
+#content,
+#coment {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+#email {
+    margin-bottom: 1rem;
+}
+
+.formSubmit {
+
+    width: 30%;
+    margin: 1rem auto;
+    height: 4rem;
+}
+
+#send {
+    width: 100%;
+    background-color: red;
+    color: white;
+    height: 2.8rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#send:hover {
+    background-color: white;
+    color: red;
+    transition: 0.5s;
+}
+
+textarea {
+    resize: none;
+}

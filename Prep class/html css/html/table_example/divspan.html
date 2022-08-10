@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivSpan</title>
+    <style>
+        #div2 {
+            border: 3px solid red;
+            background-color: burlywood;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 50%;
+            margin: auto;
+            border-radius: 25px;
+            box-shadow: 3px 3px 10px blue;
+        }
+
+        #span2 {
+            font-weight: bolder;
+            background-color: darkgoldenrod;
+        }
+
+        .container {
+            border: 5px solid blue;
+            background-color: deeppink;
+            width: 80%;
+            margin: auto;
+            border-radius: 30px;
+        }
+
+        #span4 {
+            font-size: 2rem;
+            font-weight: bolder;
+            background-color: darkgoldenrod;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bu bir Başlıktır.</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet doloribus dolores quos sequi omnis sapiente
+            inventore nesciunt ex quasi eius veritatis, nisi ut, aliquid veniam quas libero repudiandae odit in?
+        </p>
+    </div>
+    <div id="div2">
+        <h1>Bu bir başlıktır.</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, incidunt cum. Repellendus, eligendi!
+            Inventore odit ducimus sint eaque tenetur soluta <span id="span2">expedita ea impedit quis. Commodi iure ex
+                reiciendis doloribus</span> praesentium.
+        </p>
+    </div>
+    <div class="container">
+        <div>
+            <h1>Bu bir başlıktır.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, incidunt cum. Repellendus, eligendi!
+                Inventore odit ducimus sint eaque tenetur soluta expedita ea impedit quis. Commodi iure ex reiciendis
+                doloribus praesentium.
+            </p>
+        </div>
+
+
+        <div>
+            <h1>Bu bir başlıktır.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, incidunt cum. Repellendus, eligendi!
+                Inventore odit ducimus sint eaque tenetur soluta expedita ea impedit quis. <span id="span4">Commodi iure
+                    ex reiciendis doloribus praesentium.</span>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

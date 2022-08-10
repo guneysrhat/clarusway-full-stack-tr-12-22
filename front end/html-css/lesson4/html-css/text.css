@@ -1,0 +1,36 @@
+h2 {
+    text-align: center;
+}
+
+#par1 {
+    color: blue;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+#par2 {
+    color: rgba(255, 0, 0, 1);
+    text-align: right;
+    text-transform: lowercase;
+}
+
+#par3 {
+    color: #85F466;
+    text-align: justify;
+    line-height: 2rem;
+    letter-spacing: 5px;
+}
+
+#par4 {
+    color: hsl(0, 100%, 50%);
+    text-decoration: line-through dashed red 5px;
+    text-indent: 2rem;
+    line-height: 2rem;
+}
+
+#par5 {
+    color: purple;
+    text-decoration: overline wavy blue;
+    text-transform: uppercase;
+}
