@@ -2,9 +2,13 @@
     margin: 0;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     height: 100vh;
-    background-color: rgb(129, 87, 37);
+    /* background-color: rgb(129, 87, 37); */
 }
 
 .abs {
@@ -20,11 +24,35 @@ body {
 
 .div3 {
     background-color: yellow;
-    width: 50%;
-    height: 50vh;
+    width: 50rem;
+    height: 20vh;
 }
 
 .div4 {
     background-color: magenta;
     width: 50vw;
+}
+
+.div5 {
+    font-size: 1em;
+}
+
+.div6 {
+    font-size: 2em;
+}
+
+.div7 {
+    font-size: 3em;
+}
+
+.div8 {
+    font-size: 1rem;
+}
+
+.div9 {
+    font-size: 2rem;
+}
+
+.div10 {
+    font-size: 3rem;
 }
