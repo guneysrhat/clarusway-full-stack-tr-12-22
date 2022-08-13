@@ -1,3 +1,5 @@
 * {
-    border: 2;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
 }
