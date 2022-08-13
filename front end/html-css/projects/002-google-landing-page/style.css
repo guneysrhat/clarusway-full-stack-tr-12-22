@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.headerLeft {
+
+    display: flex;
+    align-items: center;
+}
+
+.headerRight {
+
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1.3rem;
+    font-size: 0.7rem;
+}
+
+header a {
+    margin-right: 1rem;
+    color: rgba(0, 0, 0, .9);
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, .7);
+}
+
+.gmail {
+    background-color: rgba(1, 127, 1, 0.703);
+    padding: .5rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.gmail:hover {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main>img {
+    width: 13rem;
+    margin: 1rem auto;
+}
+
+.searchInput>img {
+    width: 1.4rem;
+}
+
+span img {
+    width: 1rem;
+}
+
+.searchInput {
+    border: 1px solid rgb(216, 215, 215);
+    width: 38vw;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+}
+
+.searchInput:hover {
+    box-shadow: rgb(202, 199, 199) 3px 2px 3px 3px;
+}
+
+.searchInput input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchInput input::placeholder {
+    font-size: .7rem;
+    font-weight: 520;
+}
+
+.searchButtons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.searchButtons button {
+    display: flex;
+    justify-content: center;
+    padding: .5rem .6rem;
+    background-color: rgb(241, 238, 238);
+    border: none;
+    cursor: pointer;
+    margin: 0.7rem 0.3rem;
+    font-size: 0.7rem;
+    color: rgb(54, 53, 53);
+}
+
+button:hover {
+    box-shadow: rgb(236, 233, 233) 3px 2px 3px 3px;
+}
