@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(129, 87, 37);
+}
+
+.abs {
+    background-color: aqua;
+    width: 5cm;
+}
+
+.div2 {
+    background-color: chocolate;
+    width: 50%;
+    height: 50%;
+}
+
+.div3 {
+    background-color: yellow;
+    width: 50%;
+    height: 50vh;
+}
+
+.div4 {
+    background-color: magenta;
+    width: 50vw;
+}
