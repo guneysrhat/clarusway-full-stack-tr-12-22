@@ -1,0 +1,47 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+nav.yatay-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav.yatay-menu ul {
+  text-align: center;
+  list-style: none;
+}
+
+nav.yatay-menu ul li {
+  list-style: none;
+  display: inline-block;
+  background-color: wheat;
+  padding: 1rem 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  width: 5rem;
+  border-radius: 20px;
+}
+
+nav.yatay-menu ul li:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+nav.yatay-menu ul li:hover a {
+  color: white;
+}
+
+/*********************** ACILIR MENU ************/
+nav.acilir-menu {
+  width: 10rem;
+}
+
+nav.acilir-menu ul {
+  display: none;
+}
+nav.acilir-menu .fa-solid fa-bars:active {
+  opacity: 0.5;
+}
+nav.acilir-menu:hover ul {
+  display: block;
+}
