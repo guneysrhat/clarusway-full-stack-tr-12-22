@@ -33,7 +33,7 @@
 }
 .yazi5:active {
   /* transform: scale (1.1, 1.2); */
-  transform: scale(98%);
+  transform: scale(94%);
 }
 
 /*************** TRANSLATE - TRANSITION ************/
@@ -45,14 +45,41 @@
   width: 100px;
   height: 50px;
   margin: 10px;
+  transition: all 2s;
 }
+
 .x:hover {
-  transform: translateX(50px);
+  transform: translateX(150px) rotate(1800deg) scale(10%, 10%);
+  background-color: greenyellow;
 }
+
 .y:active {
   transform: translateY(50px);
+  background-color: tomato;
 }
 .xy:active {
   transform: translate(50px, -100px);
-  transition: 4s;
+  background-color: fuchsia;
+}
+.btn-div {
+  text-align: center;
+}
+
+.btn {
+  padding: 1rem;
+  width: 7rem;
+  background-color: goldenrod;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: background-color 0.5s, color 0.5s;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background-color: tomato;
+  color: white;
+}
+.btn:active {
+  transform: scale(95%);
 }
