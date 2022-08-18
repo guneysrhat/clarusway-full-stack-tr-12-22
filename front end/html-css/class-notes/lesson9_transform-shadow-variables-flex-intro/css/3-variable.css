@@ -1,0 +1,19 @@
+@import "theme.css";
+body {
+  font-family: var(--ff-open-sans);
+}
+h1 {
+  font-family: var(--ff-dyna);
+  color: var(--mor);
+}
+div {
+  box-shadow: var(--acik-golge);
+  width: 50vw;
+  margin: 1rem auto;
+  max-width: 600px;
+  min-width: 400px;
+}
+p {
+  background-color: var(--green1);
+  color: var(--green3);
+}
