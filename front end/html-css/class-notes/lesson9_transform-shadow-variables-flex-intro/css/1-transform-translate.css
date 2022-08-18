@@ -37,3 +37,22 @@
 }
 
 /*************** TRANSLATE - TRANSITION ************/
+
+.translate {
+  background-color: gold;
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+.x:hover {
+  transform: translateX(50px);
+}
+.y:active {
+  transform: translateY(50px);
+}
+.xy:active {
+  transform: translate(50px, -100px);
+  transition: 4s;
+}
