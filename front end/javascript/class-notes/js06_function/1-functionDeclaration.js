@@ -24,9 +24,10 @@ yazdir();
 //* ORNEK 2:
 //******************************************************/
 
-function selamla(ad, soyad) {
+function selamla(ad, soyad = "") {
   console.log(`Merhaba ${ad} ${soyad}`);
 }
 
 selamla("Can", "Yilmaz");
 selamla("Canan", "Ozturk");
+selamla("Ayse");
