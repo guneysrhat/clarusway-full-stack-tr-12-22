@@ -61,3 +61,8 @@ function tekCift(sayi) {
 }
 console.log(tekCift(5));
 console.log(tekCift(2));
+
+//* ORNEK 4:
+//******************************************************/
+const n = +prompt("Bir sayi giriniz:");
+console.log(tekCift(n));
