@@ -49,3 +49,42 @@ const buyukBul = function (n1, n2, n3 = -Number.MAX_VALUE) {
 // console.log("Girilen sayilarin en buyugu:", buyukBul(n1, n2, n3));
 console.log("Girilen sayilarin en buyugu:", buyukBul(-8, -9, -1));
 console.log("Girilen sayilarin en buyugu:", buyukBul(10, 9));
+
+//* ORNEK: 4 Bir fonksiyon icerisinde baska fonksiyonlar cagirabilirler
+//******************************************************/
+
+const hesapla = function (s1, s2, islem) {
+  let sonuc = 0;
+  switch (islem) {
+    case "+":
+      sonuc = topla(s1, s2);
+      break;
+    case "-":
+      sonuc = cikar(s1, s2);
+      break;
+    case "/":
+      sonuc = bol(s1, s2);
+      break;
+    case "*":
+      sonuc = carp(s1, s2);
+      break;
+    default:
+      break;
+  }
+  return sonuc;
+};
+const topla = function (s1, s2) {
+  return s1 + s2;
+};
+
+const cikar = function (s1, s2) {
+  return s1 - s2;
+};
+const bol = function (s1, s2) {
+  return s1 / s2;
+};
+const carp = function (s1, s2) {
+  return s1 * s2;
+};
+console.log(hesapla(3, 5, "+"));
+console.log(hesapla(4, 3, "/"));
