@@ -2,7 +2,7 @@
 
 //? SORU - TAHMIN
 
-//* 1- hak =5 
+//* 1- hak =5
 //* 2- Raskele sayı tut (0-100)
 //* 3- Kullanıcan tahmin iste (tahmın)
 //* 4- hak=hak-1
@@ -14,32 +14,32 @@
 //*        print(Azalt)
 //* 6- eğer (hak > 0 )
 //*       goto stage-3
-//*   değilse 
+//*   değilse
 //*       print(üzgünüz)
 
-let hak = 5
-const rastgele =Math.round(Math.random()* 100);
-console.log(rastgele);
-
 let tahmin;
-do{
-    tahmin = +prompt("Lütfen 0-100 arasında bir tahmin giriniz")
-    hak -=1;
-    if(tahmin === rastgele){
-        console.log(`Tebrikler ${5- hak} kerede bildiniz`);
-        break;
-    }else if (tahmin < rastgele){
-        console.log("Arttır ⬆");
-    }else{
-        console.log("Azalt ⬇");
+let cont;
+do {
+  let hak = 5;
+  const rastgele = Math.round(Math.random() * 100);
+  console.log(rastgele);
+  do {
+    tahmin = +prompt("Lütfen 0-100 arasında bir tahmin giriniz");
+    hak -= 1;
+    if (tahmin === rastgele) {
+      console.log(`Tebrikler ${5 - hak} kerede bildiniz`);
+      break;
+    } else if (tahmin < rastgele) {
+      console.log("Arttır ⬆");
+    } else {
+      console.log("Azalt ⬇");
     }
+  } while (hak > 0);
 
-}while(hak > 0);
-
-if (tahmin !== rastgele) {
+  if (tahmin !== rastgele) {
     console.log("uzgunuz oyunu kaybettiniz 😔😔");
-}
-
+  }
+  cont = prompt("Tekrar oynamak istermisiniz?");
+} while (cont === "y" || cont === "Y");
 
 //? Ödev programı reflash 'le
-
