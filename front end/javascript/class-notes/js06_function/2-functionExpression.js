@@ -88,3 +88,14 @@ const carp = function (s1, s2) {
 };
 console.log(hesapla(3, 5, "+"));
 console.log(hesapla(4, 3, "/"));
+
+//! calisma sorulari
+
+function alanHesaplama(taban, yukseklik) {
+  const alan = (taban * yukseklik) / 2;
+  console.log(`ucgenin alani= ${alan}`);
+}
+
+const bir = prompt("bir sayi giriniz");
+const iki = prompt("bir sayi giriniz");
+console.log(alanHesaplama(bir, iki));

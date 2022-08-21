@@ -38,20 +38,32 @@ selamla("Ayse");
 
 //* ORNEK 3:
 //******************************************************/
-
-function yasHesaplama(isim, dogumTarihi) {
-  //   const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
-  //   const sonuc = `${isim} in yasi ${
-  //     new Date().getFullYear() - dogumTarihi
-  //   } dir.`;
-  //   return sonuc;
-  return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+//! Slayt
+function yasYazdir(ad, dogumTarihi) {
+  const yas = 2021 - dogumTarihi;
+  console.log(`Benim adim ${ad} ve ben ${yas} yasindayim.`);
+  return yas;
 }
+const bir = yasYazdir("Murat", 1990);
+const iki = yasYazdir("John", 1980);
+const uc = yasYazdir("Ayse", 1994);
 
-const mesaj1 = yasHesaplama("Elif Can", 1990);
+console.log(`ortalma yas: ${(bir + iki + uc) / 3}`);
 
-console.log(mesaj1);
-console.log(yasHesaplama("Veli Canan", 1980));
+//! lesson
+// function yasHesaplama(isim, dogumTarihi) {
+//   //   const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
+//   //   const sonuc = `${isim} in yasi ${
+//   //     new Date().getFullYear() - dogumTarihi
+//   //   } dir.`;
+//   //   return sonuc;
+//   return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+// }
+
+// const mesaj1 = yasHesaplama("Elif Can", 1990);
+
+// console.log(mesaj1);
+// console.log(yasHesaplama("Veli Canan", 1980));
 
 //* ORNEK 4:
 //******************************************************/
