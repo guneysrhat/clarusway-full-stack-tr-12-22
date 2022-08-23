@@ -74,6 +74,7 @@
     /*? tüm div'lerin büyüme oranına 1 verdik.*/
     flex-grow: 1;
 
+    /*! flex-basis item'lara ihtiyacı kadar yer tahsis ediyor veya sadece icerigin buyuklugu kadar bir uzunluk veriyor (flex-basis:0); */
     flex-basis: 0;
   }
   
@@ -92,3 +93,30 @@
     flex-grow: 0;
   }
   
+
+   /** FLEX-GROW  (width)*/
+   .container3 {
+    background-color: purple;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .container3 div {
+    background-color: lightblue;
+  }
+
+  div.div1{
+      width: 10%;
+  }
+  div.div2{
+      width: 20%;
+  }
+  div.div3{
+      width: 30%;
+  }
+  div.div4{
+      width: 40%;
+  }
