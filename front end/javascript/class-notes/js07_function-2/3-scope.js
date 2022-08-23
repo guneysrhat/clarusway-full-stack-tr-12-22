@@ -27,4 +27,4 @@ const fonks2 = () => {
 };
 
 fonks2(); //! 11
-console.log(sayi2++); //!7
+console.log(sayi2++); //!7 ######
