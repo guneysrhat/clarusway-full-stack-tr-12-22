@@ -1,6 +1,7 @@
 * {
     font-size: 1.2rem;
     text-align: center;
+    margin: 0;
   }
   
   .container {
@@ -9,17 +10,85 @@
     /*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
     flex-direction: row; /*! default => row*/
   
-     /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+    /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
     flex-wrap: wrap;
-    justify-content: space-evenly;
+  
+    /*! Yatay Hizalama: justify-content
+    /** flex-start, flex-end,center, space-around,space-evenly, space-between*/
+    justify-content: center;
+  
+    /*?gap, flex içerisindeki elemanların dikey ve yatay boşluklarını belirlemek için kullanılabilir. ilk yazılan yatay (satırlar arası) boşluk, 2. yazılan ise dikey (sutunlar arası) boşluktur */
+    gap: 20px 30px;
+    padding: 0.5rem;
   }
   
   .container div {
     background-color: gold;
     width: 5rem;
     height: 5rem;
-    margin: 1rem;
+    /* margin: 1rem; */
   }
+  
+  /** DIKEY HIZLAMA ORNEGI */
+  
+  .container1 {
+    height: 20rem;
+    background-color: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    /* padding: 0.5rem; */
+  
+    justify-content: center;
+  
+    /*! Dikey Hizalama => align-items
+    /**  flex-start, flex-end,center, stretch,baseline */
+    align-items: flex-end;
+  
+    /*! Çok satırlı verilerin dikeyde hizalanmasi için kullanılır.
+    //*! flex-wrap: wrap modu */
+    align-content: flex-end;
+    overflow: auto;
+  }
+  
+  .container1 div {
+    height: 5rem;
+    width: 5rem;
+    background-color: tomato;
+  }
+  
+  /** FLEX-GROW */
+  .container2 {
+    background-color: hotpink;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .container2 div {
+    background-color: khaki;
+    width: 5rem;
+  
+    /*? tüm div'lerin büyüme oranına 1 verdik.*/
+    flex-grow: 1;
 
-
+    flex-basis: 0;
+  }
+  
+  /*? grow2 classindakiler diğerlerine göre 2 kat daha fazla büyüyebilir.*/
+  div.grow2 {
+    flex-grow: 2;
+  }
+  
+  /*? grow3 classindakiler diğerlerine göre 3 kat daha fazla büyüyebilir.*/
+  div.grow3 {
+    flex-grow: 3;
+  }
+  
+  /*? nogrow classindakiler diğerlerine göre hiç büyümezler*/
+  div.nogrow {
+    flex-grow: 0;
+  }
   
