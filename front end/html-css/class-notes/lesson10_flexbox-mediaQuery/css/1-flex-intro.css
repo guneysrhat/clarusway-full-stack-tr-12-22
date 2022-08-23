@@ -1,0 +1,25 @@
+* {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .container {
+    background-color: fuchsia;
+    display: flex;
+    /*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
+    flex-direction: row; /*! default => row*/
+  
+     /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .container div {
+    background-color: gold;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+  }
+
+
+  
