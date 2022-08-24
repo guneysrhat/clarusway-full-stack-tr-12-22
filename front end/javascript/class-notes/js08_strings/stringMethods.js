@@ -168,3 +168,47 @@ oku = oku.replace(/BASARILI/gi, "Zengin");
 console.log(oku);
 
 //! NOT: replace metodu eger Regex ile aksi belirtilmiyorsa (g) sadece ilk buldugunu degistirir.
+
+//* ----------------------------------------------------------
+//*  replaceAll() --immutable
+//* ----------------------------------------------------------
+let degistir = "daglar daglar yol ver gecem..";
+degistir = degistir.replaceAll("daglar", "Dağlar");
+console.log(degistir);
+
+//?Regex de kullanilabilir.
+let degistir2 =
+  " No woman, no cry" +
+  " No woman, no cry, eh, yeah" +
+  " Little darling, don't shed no tears" +
+  " No woman, no cry, eh";
+
+console.log(degistir2.replaceAll(/no/gi, "Hayir"));
+
+//* ----------------------------------------------------------
+//*  slice(beginIndex[, endIndex])
+//*  substring(beginIndex[, endIndex])
+//*  substr (depreceated)
+//* ----------------------------------------------------------
+const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
+
+const sliced = veysel.slice(33);
+console.log(sliced, typeof sliced); //? gunduz gece..
+
+console.log(veysel.slice(17, 30)); //? dayim yuruyor.
+console.log(veysel.slice(-10)); //? duz gece..
+console.log(veysel.slice(-23, -19)); //? yuru
+
+console.log(veysel.substring(17, 30)); //? dayim yuruyor
+//! negatif indeks substring ile kullanilamaz.
+console.log(veysel.substring(-10)); //? Uzun ince bir yoldayim yuruyorum gunduz gece..
+
+//* ----------------------------------------------------------
+//* split([sep [, limit] ])
+//* ----------------------------------------------------------
+const tarkan = "Gel gunduzle gece olalim";
+const splited = tarkan.split(" ");
+console.log(splited, typeof splited); //! Bosluklara göre ayirarak Array'e cevirdi.
+
+const chars = tarkan.split("");
+console.log(chars); //* null karakterine göre harfleri ayırarark bir char dizisi oluşturdu.
