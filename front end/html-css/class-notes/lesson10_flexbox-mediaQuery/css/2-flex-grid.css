@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.logo {
+  background-color: hotpink;
+  padding: 1rem;
+}
+
+.menu {
+  background-color: tomato;
+  padding: 1rem;
+}
+.banner {
+  background-color: turquoise;
+  padding: 4rem;
+}
+
+.bol1,
+.bol2,
+.bol3 {
+  background-color: greenyellow;
+  height: calc(100vh - 330px);
+  border: solid 1.5px grey;
+}
+
+.bol4,
+.bol5,
+.bol6 {
+  background-color: tomato;
+  padding: 1rem;
+  border: solid 1.5px grey;
+}
+
+.footer {
+  background-color: fuchsia;
+  padding: 1.5rem;
+}
