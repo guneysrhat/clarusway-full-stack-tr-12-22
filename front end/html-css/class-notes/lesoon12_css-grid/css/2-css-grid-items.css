@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 25vh); */
+    grid-template-rows: 25vh repeat(3, calc(25vh - 0.5rem));
+  
+    /* gap: 1rem 2rem; */
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
+  
+  .content {
+    background-color: lightcyan;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .content img,
+  iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .c6 {
+    /*! item'lari bireysel olarak yatay duzlemde hizalar. */
+    justify-self: center;
+    width: 6rem;
+  }
+  .c11 {
+    /*! item'lari bireysel olarak dikey duzlemde hizalar. */
+    align-self: center;
+    height: 3rem;
+  }
+  
+  .c1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: coral;
+  }
+  .c4 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: crimson;
+  }
+  
+  .c8 {
+    background-color: darkgoldenrod;
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end:5; */
+  
+    /*!  grid-area: row_start / col_start / row_end / col_end */
+    grid-area: 3 / 2 / 5 / 4;
+  }
+  
+  .c2 {
+    background-color: darkkhaki;
+    grid-area: 1 / 3 / span 2 / span 2;
+  }
+  
