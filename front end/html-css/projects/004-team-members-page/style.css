@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5% auto;
+  background-color: rgb(223, 216, 216);
+  font-weight: bold;
+}
+header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.baslik-1 {
+  font-size: 1.3rem;
+  text-align: center;
+  width: 50%;
+}
+.baslik-2 {
+  font-size: 1.5rem;
+  text-align: center;
+  text-align: justify;
+  width: 50%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-left: 5rem;
+}
+.card {
+  display: flex;
+  width: 33%;
+  height: 15%;
+}
+.image {
+  width: 85%;
+  margin-bottom: 10%;
+  padding-bottom: 2%;
+}
+.card2,
+.card5 {
+  margin-top: 2rem;
+}
+img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 2rem;
+  width: 75%;
+  transition: all 1s;
+  margin-bottom: 5%;
+}
+img:hover {
+  transform: scale(110%);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 7px 17px;
+}
+.image {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.card p:nth-child(1) {
+  padding-top: 110%;
+  margin-top: 10%;
+  width: 100%;
+  transform: rotate(90deg);
+  margin-left: -1rem;
+}
+@media (max-width: 1100px) {
+  body {
+    width: 80%;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .baslik-1 {
+    margin-bottom: 1rem;
+  }
+  .baslik-2 {
+    text-align: center;
+  }
+  .card {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .card2,
+  .card5 {
+    margin-top: 0;
+  }
+  .card2,
+  .card4,
+  .card6 {
+    margin-top: 2rem;
+  }
+  .image img {
+    width: 90%;
+  }
+  .image p {
+    font-size: 1.2rem;
+  }
+  .card p:nth-child(1) {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    width: 75%;
+    margin: 3rem auto;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  img {
+    width: 80%;
+  }
+  .image p {
+    font-size: 1rem;
+    margin: auto;
+  }
+  header {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .baslik-1 {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .baslik-2 p {
+    display: none;
+  }
+  .baslik-2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .card p:nth-child(1) {
+    font-size: 0.7rem;
+  }
+}

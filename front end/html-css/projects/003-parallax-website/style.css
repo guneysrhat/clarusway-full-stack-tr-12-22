@@ -1,0 +1,90 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  color: #5f6061;
+}
+.image {
+  background-image: url(img/bg.jpg);
+}
+
+.image2 {
+  background-image: url(img/bg2.jpg);
+}
+.image3 {
+  background-image: url(img/bg3.jpg);
+}
+.image4 {
+  background-image: url(img/bg4.jpg);
+}
+.image,
+.image2,
+.image3,
+.image4 {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.backgroundLight {
+  text-align: center;
+  padding: 1rem;
+}
+.backgroundLightHeader {
+  font-size: 1.5rem;
+}
+.backgroundLightTitle {
+  font-size: 0.9rem;
+}
+.backgroundDark {
+  text-align: center;
+  padding: 1rem;
+  background-color: #282e34;
+}
+.backgroundDarkHeader {
+  font-size: 1.5rem;
+}
+.backgroundDarkTitle {
+  font-size: 0.9rem;
+}
+
+.header {
+  background-color: black;
+  padding: 0.7rem;
+  letter-spacing: 0.2rem;
+  border-radius: 1.2rem 0 1.2rem 0;
+  outline: 0.4rem inset purple;
+  outline-offset: 0.2rem;
+  line-height: 2rem;
+}
+.headerTitle {
+  color: white;
+  font-size: 1.7rem;
+}
+.image2 img {
+  width: 33%;
+}
+
+@media (max-width: 450px) {
+  .header {
+    padding: 0.4rem;
+    letter-spacing: 0.2rem;
+    border-radius: 0.7rem 0 0.7rem 0;
+    outline: 0.3rem inset purple;
+    outline-offset: 1.5rem;
+    line-height: 0.1rem;
+  }
+  .headerTitle {
+    font-size: 1rem;
+  }
+}
