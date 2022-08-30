@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #4ecdc4, #556270);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+
+        }
+
+        input {}
+
+        #result {
+            width: 75%;
+            text-align: center;
+            margin: auto;
+            border: 2px solid rgb(179, 182, 187);
+            height: 15rem;
+            background-color: rgb(236, 241, 241);
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 3px 4px 5px #aaaa;
+
+        }
+
+        .select {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Coding Challenge
+    </h1>
+    <div class="select">
+
+        <label for="select">Wahlen Sie funktion</label><br>
+        <select name="select" id="select">
+    </div>
+    <option value=""></option>
+    <option value="resverseString">Reverse String</option>
+    <option value="reverseWord">Reverse Word</option>
+    </select><br>
+    <form id="form" action="">
+
+        <label for="name">Geben Sie ein Satz ein</label><br>
+
+        <input type="text" name="text" autocomplete="off"><br>
+        <button>Submit</button>
+    </form><br>
+    <div id="result"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
