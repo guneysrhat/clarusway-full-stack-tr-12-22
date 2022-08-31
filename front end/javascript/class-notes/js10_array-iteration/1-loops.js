@@ -4,12 +4,13 @@
 
 console.log("******* LOOPS IN ARRAYS ******");
 
+//?-------------- ÖRNEK -------------------
 const dizi = [-5, 15, 22, -4, 45, 78];
 
 const negatifler = [];
 const pozitifler = [];
 
-const dizilereAyir = (n) => {
+const dizelereAyir = (n) => {
   for (let i = 0; i < n.length; i++) {
     if (n[i] < 0) {
       negatifler.push(n[i]);
@@ -18,11 +19,13 @@ const dizilereAyir = (n) => {
     }
   }
 };
-dizilereAyir(dizi);
+dizelereAyir(dizi);
+
 console.log(negatifler);
 console.log(pozitifler);
 console.log(dizi);
-//?-----------------ORNEK--------------------------
+
+//?-------------- ÖRNEK -------------------
 //? Dizideki notlarin ortalamasini hesaplayiniz.
 const notlar = [55, 77, 23, 89, 100];
 
@@ -48,22 +51,22 @@ console.log("ORTALAMA:", toplam / notlar.length);
 
 const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
 
-const findStudents = (arr, search) => {
-  let counter = 0;
-  for (let i in arr) {
-    if (search === arr[i]) {
-      counter++;
-    }
-  }
-  if (counter === 0) {
-    return `${search} can not be found `;
-  } else {
-    return `${search} found ${counter} times`;
-  }
-};
+// const findStudents = (arr, search) => {
+//   let counter = 0;
+//   for (let i in arr) {
+//     if (search === arr[i]) {
+//       counter++;
+//     }
+//   }
+//   if (!counter) {
+//     return `${search} can not be found`;
+//   } else {
+//     return `${search} found ${counter} times`;
+//   }
+// };
 
-const name = prompt("Please enter a name").toLowerCase();
-console.log(findStudents(students, name));
+// const name = prompt("Please enter a name").toLowerCase();
+// console.log(findStudents(students, name));
 
 //* ======================================================
 //*                   FOR-OF LOOP
@@ -76,16 +79,20 @@ console.log(findStudents(students, name));
 const findStudentsOf = (arr, search) => {
   let counter = 0;
   for (let item of arr) {
-    if (search === item) {
-      counter++;
-    }
+    //? Ternary
+    // search === item ? counter++ : null;
+
+    //! Short-circuit yöntemi: && => kosul dogru (true) ise ifadeyi calisitir.
+    search === item && counter++;
+
+    //! Short-circuit yöntemi: || => kosul yanlis (false) ise ifadeyi çalıştır.
+    search === item || counter++;
   }
-  if (!counter) {
-    return `${search} can not be found `;
-  } else {
-    return `${search} found ${counter} times`;
-  }
+
+  return !counter
+    ? `${search} can not be found`
+    : `${search} found ${counter} times`;
 };
 
-const studentsName = prompt("Please enter a name").toLowerCase();
-console.log(findStudentsOf(students, studentsName));
+const studentName = prompt("Please enter a name").toLowerCase();
+console.log(findStudentsOf(students, studentName));
