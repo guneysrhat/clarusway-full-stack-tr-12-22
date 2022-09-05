@@ -11,10 +11,10 @@
 
 console.log("******* Objects *********");
 
-//! 3 farkli yontem ile object olusturulabilir
-//* ======================================================
-//* 1- Object() class'indan new Operatoru ile
-//* ======================================================
+//! 3 farkli yontem ile Object olusturulabilir
+//* ---------------------------------------------------------
+//* 1- Object() class'ından new Operatörü ile
+//* ---------------------------------------------------------
 
 const arabalar = new Object();
 arabalar.marka = "BMW";
@@ -23,61 +23,61 @@ arabalar.model = 2022;
 arabalar.lpg = true;
 console.log(arabalar);
 
-//! Read
-console.log(arabalar.lpg); //? .notation
-console.log("MODEL:", arabalar["model"]); //? Square bracket notation
+//!Read
+// console.log(arabalar.lpg); //? .notation
+// console.log("MODEL:", arabalar["model"]); //? Square bracket notation
 
-//? Square bracket yonteminin en buyuk avantaji key degerini
-//? degisken olarak kullanabilmemizdir.
-const key = "motor";
-console.log(arabalar[key]);
+// //? Square bracket yonteminin en buyuk avantaji key degerini
+// //? degisken olarak kullanabilmemizdir.
+// const key = "mark";
+// console.log(arabalar[key]);
 
-arabalar.motor = "1.6";
-console.log(arabalar);
+// arabalar.motor = "1.6";
+// console.log(arabalar);
+
+// //* ---------------------------------------------------------
+// //* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
+// //* ---------------------------------------------------------
+
+// //? Object Constructure
+// function Personel(id, ad, maas) {
+//   this.id = id;
+//   this.ad = ad;
+//   this.maas = maas;
+//   // console.log(this); //! Personel objesine baglanmistir (binded)
+// }
+
+// const kisi1 = new Personel("1234567890", "Mustafa", 15000);
+// const kisi2 = new Personel("177567890", "Canan", 25000);
+// // console.log(kisi1);
+// console.log(kisi1.ad);
+// console.log(kisi2.maas);
+// console.log(kisi2["id"]);
+
+// //? Global alanda window objesini gosterir.
+// console.log(this);
+// window.alert("Merhaba");
 
 //* ---------------------------------------------------------
-//* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
-//* ---------------------------------------------------------
-
-//? Object Constructure
-function Personel(id, ad, maas) {
-  this.perId = id;
-  this.perAd = ad;
-  this.maas = maas;
-  //   console.log(this); //! Personel objesine baslanmistir(binded )
-}
-
-const kisi1 = new Personel("123456789", "Mustafa", 15000);
-const kisi2 = new Personel("13214456789", "Canan", 25000);
-// console.log(kisi1);
-console.log(kisi1.perAd);
-console.log(kisi2.maas);
-console.log(kisi2["perId"]);
-
-//? Global alanda window objesini gosterir.
-console.log(this);
-// window.alert("Meraba");
-
-//* ---------------------------------------------------------
-//* 3- Object Literal (En cok tercih edilen yontem)
+//* 3- Object literal (En cok tercih edilen yontem)
 //* ---------------------------------------------------------
 
 const worker = {
   name: "Can",
-  surnam: "Canan",
+  surname: "Canan",
   age: 33,
   job: "developer",
-  languages: ["C++", "Java", "JavaScript", "Python", "Go"],
-  salary: 140000,
+  languages: ["C++", "Java", "Javacript", "Pyhton", "Go"],
+  salary: "140000",
 };
 console.log(worker);
 
 console.log("JOB:", worker.job);
 console.log("Lang:", worker["languages"]);
 
-worker["languages"].forEach((l) => console.log(l));
-
 console.log(worker.languages[2]);
+
+worker["languages"].forEach((l) => console.log(l));
 
 worker.dob = "1990";
 worker.email = "can@gmail.com";
@@ -87,8 +87,8 @@ console.log(worker);
 worker["salary"] *= 1.1;
 console.log(worker);
 
-//*Objest Capy
-const person = worker; //! Shallow (Sig -Sig) Copying
+//* Object Copy
+const person = worker; //! Shallow (Sig - Sığ) Copying
 console.log("PERSON:", person);
 
 //! Object.create(), Object.assign(), spread (...), concat() , slice() -> Shallow Copying
@@ -103,30 +103,29 @@ let deepCopyOfWorker = JSON.parse(JSON.stringify(worker));
 deepCopyOfWorker.dob = "2022";
 console.log("DEEP:", deepCopyOfWorker);
 
-//* ---------------------------------------------------------
-//*                  Object Methodlari
-//* ---------------------------------------------------------
+//* ======================================================
+//*              Object Metotlari
+//* ======================================================
 
-// const personal = {
-//   name: "Can",
-//   surnam: "Canan",
-//   dob: 1990,
-//   job: "developer",
-//   salary: "140000",
-//   driveingLicanse: true,
-//   calculateAge: function () {
-//     return new Date().getFullYear() - this.dob;
-// },
-
-// sum: function () {
-//   console.log(this);
-//   return ${this.name} is ${this.calculateAge()} years old;
-// },
-// //   sum: () => {
-// //     console.log(this); //? window
-// //     return ${this.name} is ${this.calculateAge()} years old;
-// //   },
-// };
+const personal = {
+  name: "Can",
+  surname: "Canan",
+  dob: "1990",
+  job: "developer",
+  salary: "140000",
+  drivingLicense: true,
+  calculateAge: function () {
+    return new Date().getFullYear() - this.dob;
+  },
+  summary: function () {
+    console.log(this); //? window
+    return `${this.name} is ${this.calculateAge()} years old`;
+  },
+  // summary: () => {
+  //   console.log(this); //? window
+  //   return `${this.name} is ${this.calculateAge()} years old`;
+  // },
+};
 
 //! NOT: arrow fonksiyonlari ozellikle callback fonksiyonu olarak
 //! kullanilmak ve bu fonksiyonlarda this keyword kullanim
@@ -136,43 +135,43 @@ console.log("DEEP:", deepCopyOfWorker);
 //! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
 //! diger (func. expression veya declaration) yontemlerini kullanabilir.
 
-// console.log("Dob:", personal.calculateAge());
-// console.log("SUMMARY:", personal.summary());
+console.log("Age:", personal.calculateAge());
+console.log("SUMMARY:", personal.summary());
 
-//* ======================================================
-//*                    OBJECT ITERATION
-//* ======================================================
+// * ======================================================
+// *                  OBJECT ITERATION
+// * ======================================================
 
+//? nested
 const people = {
   person1: {
     name: "Can",
-    surnam: "Canan",
-    dob: 1990,
+    surname: "Canan",
+    dob: "1990",
     job: "developer",
     salary: "140000",
-    driveingLicanse: true,
+    drivingLicense: true,
   },
-
   person2: {
     name: "John",
-    surnam: "Sweet",
-    dob: 1990,
-    job: "Tester",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
     salary: "110000",
-    driveingLicanse: false,
+    drivingLicense: false,
   },
   person3: {
-    name: "Steave",
-    surnam: "Jobs",
-    dob: 2000,
-    job: "QA",
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
     salary: "90000",
-    driveingLicanse: true,
+    drivingLicense: true,
   },
 };
 
-console.log(people);
-console.log("Salary of John :", people.person2.salary);
+console.log(people); //? {person1: {…}, person2: {…}}
+console.log("Salary of P2:", people.person2.salary);
 
 //? Javascript'de Objeler default olarak iterable degildir.
 //? Ama for in ve for of donguleri ile itere edilebilirler.
@@ -197,14 +196,35 @@ for (let person in people) {
 //* for (x of iterable) {
 //*   code block to be executed
 //* }
-
+console.log("****************");
 for (let key of Object.keys(people)) {
   console.log(key);
 }
-for (let v of Object.values(people)) {
-  console.log(v);
-}
 
+console.log("****************");
+//? people objesindeki tum salary 'leri yazdir
 for (let v of Object.values(people)) {
   console.log(v.salary);
+  // console.log(v["salary"]);
 }
+
+//? people objesindeki tum salary 'leri yazdir
+for (let [k, v] of Object.entries(people)) {
+  console.log(`${k} - ${v.salary}`);
+}
+
+//! ARRAY METOTLARI ILE
+console.log("********");
+Object.keys(people).forEach((p) => console.log(p));
+console.log("********");
+Object.values(people).forEach((p) => console.log(p.surname));
+
+//? job = developer olanlarin dob degelerini yazdiriniz.
+console.log("*** DOB ****");
+Object.values(people)
+  .filter((p) => p.job === "developer")
+  .forEach((p) => console.log(p.dob));
+
+//********************************************************
+//* JSON => Javascript Object Notation
+//********************************************************
