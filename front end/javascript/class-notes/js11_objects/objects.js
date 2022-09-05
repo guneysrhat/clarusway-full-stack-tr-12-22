@@ -144,7 +144,7 @@ console.log("DEEP:", deepCopyOfWorker);
 //* ======================================================
 
 const people = {
-  can: {
+  person1: {
     name: "Can",
     surnam: "Canan",
     dob: 1990,
@@ -153,7 +153,7 @@ const people = {
     driveingLicanse: true,
   },
 
-  John: {
+  person2: {
     name: "John",
     surnam: "Sweet",
     dob: 1990,
@@ -161,7 +161,7 @@ const people = {
     salary: "110000",
     driveingLicanse: false,
   },
-  Steave: {
+  person3: {
     name: "Steave",
     surnam: "Jobs",
     dob: 2000,
@@ -172,7 +172,17 @@ const people = {
 };
 
 console.log(people);
-console.log("Salary of John :", people.John.salary);
+console.log("Salary of John :", people.person2.salary);
 
 //? Javascript'de Objeler default olarak iterable degildir.
 //? Ama for in ve for of donguleri ile itere edilebilirler.
+
+//! FOR - IN
+//* for (key in object) {
+//*   // code block to be executed
+//* }
+
+for (let person1 in people) {
+  console.log(person1);
+  console.log(people[person1]);
+}
