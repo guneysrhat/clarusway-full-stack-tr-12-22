@@ -177,12 +177,34 @@ console.log("Salary of John :", people.person2.salary);
 //? Javascript'de Objeler default olarak iterable degildir.
 //? Ama for in ve for of donguleri ile itere edilebilirler.
 
+//? Objelerin key ve value'larini okumak icin built-in metotlar vardir.
+//? Bu mettotlar aslinda objelerin key ve/veya value'lari bir dizi olarak dondurur.
+console.log(Object.keys(people));
+console.log(Object.values(people));
+console.log(Object.entries(people));
+
 //! FOR - IN
 //* for (key in object) {
 //*   // code block to be executed
 //* }
 
-for (let person1 in people) {
-  console.log(person1);
-  console.log(people[person1]);
+for (let person in people) {
+  console.log(person);
+  console.log(people[person]);
+}
+
+//! FOR - OF
+//* for (x of iterable) {
+//*   code block to be executed
+//* }
+
+for (let key of Object.keys(people)) {
+  console.log(key);
+}
+for (let v of Object.values(people)) {
+  console.log(v);
+}
+
+for (let v of Object.values(people)) {
+  console.log(v.salary);
 }
