@@ -1,0 +1,20 @@
+//*******  CARDS  *********/
+@use "../abstracts/mixins" as m;
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  .card1 {
+    @include m.myBox(green, white);
+  }
+  .card2 {
+    @include m.myBox(brown, white);
+  }
+  .card3 {
+    @include m.myBox(yellow, black);
+  }
+  .card4 {
+    @include m.myBox(rgb(40, 33, 56), white);
+  }
+}

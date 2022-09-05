@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10rem;
+}
+.articles .article2 {
+  background-color: hotpink;
+  border-color: green;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hotpink;
+  padding: 1rem;
+  line-height: 2rem;
+}
+.banner aside button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #30a7c3;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.banner img {
+  width: 30%;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+.cards .card1 {
+  background-color: green;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card2 {
+  background-color: brown;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card3 {
+  background-color: yellow;
+  color: black;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card4 {
+  background-color: rgb(40, 33, 56);
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
+footer p {
+  background-color: lightgreen;
+}
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
+  width: 20%;
+  background-color: rgba(43, 143, 229, 0.89);
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social-icons .social2 {
+  width: 20%;
+  background-color: rgba(65, 155, 232, 0.89);
+  font-size: 2rem;
+  color: #55004e;
+}
+footer .social-icons .social3 {
+  width: 20%;
+  background-color: rgba(88, 167, 234, 0.89);
+  font-size: 3rem;
+  color: #0fa8a1;
+}
+footer .social-icons .social4 {
+  width: 20%;
+  background-color: rgba(111, 179, 237, 0.89);
+  font-size: 4rem;
+  color: #121456;
+}
+footer .social-icons .social5 {
+  width: 20%;
+  background-color: rgba(133, 191, 240, 0.89);
+  font-size: 5rem;
+  color: #64c217;
+}
+
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: pink;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

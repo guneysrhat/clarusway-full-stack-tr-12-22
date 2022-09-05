@@ -1,0 +1,14 @@
+//*****************
+//! @MIXIN
+//*****************
+// @import "variables";
+@use "variables" as v;
+
+@mixin myBox($backColor, $color) {
+  background-color: $backColor;
+  color: $color;
+  width: 25%;
+  height: 15rem;
+  border: v.$myBorder;
+  border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+//*******  HEADER *********/
+@use "../abstracts/variables" as *;
+
+header {
+  background-color: $navBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  img {
+    width: 80px;
+    border: $myBorder;
+    border-radius: 10px;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      //! içinde bulundğumuz elementi refere etmek için & işareti kullanılır.
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  a {
+    color: $fontColor;
+    text-decoration: none;
+  }
+}
