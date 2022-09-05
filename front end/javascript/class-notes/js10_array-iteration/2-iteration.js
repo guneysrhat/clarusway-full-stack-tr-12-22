@@ -119,3 +119,19 @@ salaries
 //* ======================================================
 //*                 REDUCE METHOD
 //* ======================================================
+// const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+
+const sumOfSalaries = salaries.reduce((acc, val) => acc + val, 1);
+console.log("Sum :", sumOfSalaries);
+const besfaktorial = [1, 2, 3, 4, 5, 6, 7];
+
+const faktorial = besfaktorial.reduce((acc, val) => acc * val, 1);
+console.log(faktorial);
+
+//? ÖRNEK ÖRNEK :Bir Firma, 9000 TL den az olan maaşlara  %10 zam yapmak istiyor ve zam  yapılan bu kişilere toplam  kaç  TL ödeneceğini bilmek istiyor.İlgili programı yazınız .
+
+const sumOfRaisedSalaries = salaries
+  .filter((sal) => sal <= 9000)
+  .map((sal) => Math.trunc(sal * 1.1))
+  .reduce((acc, salary) => acc + salary, 0);
+console.log(sumOfRaisedSalaries);
