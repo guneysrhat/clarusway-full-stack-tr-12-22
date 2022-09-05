@@ -107,21 +107,26 @@ console.log("DEEP:", deepCopyOfWorker);
 //*                  Object Methodlari
 //* ---------------------------------------------------------
 
-const personal = {
-  name: "Can",
-  surnam: "Canan",
-  dob: 1990,
-  job: "developer",
-  salary: "140000",
-  driveingLicanse: true,
-  calculateAge: function () {
-    return new Date().getFullYear() - this.dob;
-  },
-  summary: () => {
-    console.log(this); //?window
-    return `${this.name} is ${this.calculateAge()} years old`;
-  },
-};
+// const personal = {
+//   name: "Can",
+//   surnam: "Canan",
+//   dob: 1990,
+//   job: "developer",
+//   salary: "140000",
+//   driveingLicanse: true,
+//   calculateAge: function () {
+//     return new Date().getFullYear() - this.dob;
+// },
+
+// sum: function () {
+//   console.log(this);
+//   return ${this.name} is ${this.calculateAge()} years old;
+// },
+// //   sum: () => {
+// //     console.log(this); //? window
+// //     return ${this.name} is ${this.calculateAge()} years old;
+// //   },
+// };
 
 //! NOT: arrow fonksiyonlari ozellikle callback fonksiyonu olarak
 //! kullanilmak ve bu fonksiyonlarda this keyword kullanim
@@ -131,5 +136,43 @@ const personal = {
 //! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
 //! diger (func. expression veya declaration) yontemlerini kullanabilir.
 
-console.log("Dob:", personal.calculateAge());
-console.log("SUMMARY:", personal.summary());
+// console.log("Dob:", personal.calculateAge());
+// console.log("SUMMARY:", personal.summary());
+
+//* ======================================================
+//*                    OBJECT ITERATION
+//* ======================================================
+
+const people = {
+  can: {
+    name: "Can",
+    surnam: "Canan",
+    dob: 1990,
+    job: "developer",
+    salary: "140000",
+    driveingLicanse: true,
+  },
+
+  John: {
+    name: "John",
+    surnam: "Sweet",
+    dob: 1990,
+    job: "Tester",
+    salary: "110000",
+    driveingLicanse: false,
+  },
+  Steave: {
+    name: "Steave",
+    surnam: "Jobs",
+    dob: 2000,
+    job: "QA",
+    salary: "90000",
+    driveingLicanse: true,
+  },
+};
+
+console.log(people);
+console.log("Salary of John :", people.John.salary);
+
+//? Javascript'de Objeler default olarak iterable degildir.
+//? Ama for in ve for of donguleri ile itere edilebilirler.
