@@ -118,9 +118,18 @@ const personal = {
     return new Date().getFullYear() - this.dob;
   },
   summary: () => {
+    console.log(this); //?window
     return `${this.name} is ${this.calculateAge()} years old`;
   },
 };
+
+//! NOT: arrow fonksiyonlari ozellikle callback fonksiyonu olarak
+//! kullanilmak ve bu fonksiyonlarda this keyword kullanim
+//! gereksinimini kaldirmak icin gelistirilmistir.
+//! Lexical context'e sahiptirler.Dolayisiyla, bir obje fonksiyonu
+//! olarak kullanilirsa, this kelimesi global scope'u (window nesnesini)
+//! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
+//! diger (func. expression veya declaration) yontemlerini kullanabilir.
 
 console.log("Dob:", personal.calculateAge());
 console.log("SUMMARY:", personal.summary());
