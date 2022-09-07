@@ -133,3 +133,71 @@ const calc = (a, b, operand) => {
 console.log(calc(45, 77, "+"));
 console.log(calc(5, 7, "*"));
 
+//! Write a JavaScript program that asks the user to enter a day, check this day, and display whether a weekday or not.
+
+//? Example1:
+//? input = Tuesday ⇒ output: Tuesday is a weekday
+//? Example2:
+//? input = Saturday⇒ output: Saturday is not a weekday
+
+const checkDay = (day) => {
+  let output;
+  switch (day) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday":
+      output = `${day} is a weekday`;
+      break;
+    case "Sunday":
+    case "Saturday":
+      output = `${day} is not a weekday `;
+      break;
+    default:
+      return "invalid process";
+  }
+  return output;
+};
+
+console.log(checkDay("Monday"));
+console.log(checkDay("Tuesday"));
+console.log(checkDay("Sunday"));
+
+//! Write a JavaScript program that tells the user provided number is odd or even.
+
+//? pseudocode:
+//? num % 2
+
+const oddOrEven = (num) => {
+  if (num % 2 === 0) {
+    return `${num} is even`;
+  } else {
+    return `${num} is odd`;
+  }
+};
+
+console.log(oddOrEven(45));
+console.log(oddOrEven(44));
+
+//! Write a JavaScript program to find a value that is nearest to 100 from two different given integer values.
+
+//? pseudocode:
+//? smaller result difference from 100 is the nearest
+
+const nearestNum = (y, z) => {
+  let diffY = Math.abs(100 - y);
+  let diffZ = Math.abs(100 - z);
+
+  if (diffY > diffZ) {
+    return `${z} is the nearest to 100`;
+  } else if (diffY === diffZ) {
+    return `they are equally close`;
+  } else {
+    return `${y} is the nearest to 100`;
+  }
+};
+
+console.log(nearestNum(25, -96));
+console.log(nearestNum(95, 105));
+console.log(nearestNum(98, 99));
