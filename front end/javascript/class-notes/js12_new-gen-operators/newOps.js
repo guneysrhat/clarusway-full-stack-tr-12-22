@@ -165,3 +165,56 @@ showName(`Noah`, `Adams`, `Developer`, `Instr`, `Professor`, `Dad`);
 //*======================================================
 //*  SPREAD (...)
 //* ======================================================
+
+//? Spread operatoru ise iterables olan bir elemani bireysel
+//? degerler haline getirir.
+
+//* array concatitons
+const flyingVecihles = ["Aircraft", "Helicopter", "QuadCopter"];
+const automobiles = ["Truck", "Bus", "Car", "SUV"];
+// const allVehicles = [flyingVecihles, automobiles];
+const allVehicles = [...flyingVecihles, ...automobiles];
+console.log(allVehicles);
+
+//* EXAMPLE:
+const citrus = ["orange", "lime", "lemon"];
+
+const fruits = ["apple", ...citrus, "banana", "chery", "pear"];
+console.log(fruits);
+
+//*String spread
+let str = "Hello FS12";
+console.log([...str]);
+const charArray = [...str];
+console.log(charArray, str);
+
+charArray[0] = "X";
+console.log(charArray, str);
+
+//*Max()
+console.log(Math.max(1, 3, 5, 2, 10));
+const nums = [1, 3, 5, 2, 10];
+console.log(Math.max(...nums));
+
+//*Array Coppy
+
+const myNumbers = [1, 2, 3];
+const herNumbers = [-1, ...myNumbers, 7];
+const hisNumbers = [...myNumbers];
+hisNumbers.push(101);
+console.log("MY:", myNumbers, "His:", hisNumbers);
+console.log(herNumbers);
+
+//* Object Coppy
+const myObj = { a: 1, b: 2, c: 4 };
+const herObj = { a: 2, z: 4, c: 3 };
+
+const copiedObj = { ...myObj };
+console.log(copiedObj);
+
+copiedObj.c = "33";
+console.log(copiedObj, myObj);
+
+const combinedObj = { ...herObj, ...myObj };
+
+console.log(combinedObj);
