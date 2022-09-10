@@ -107,5 +107,5 @@ console.log(lists); //? nodolist
 lists.forEach((li) => console.log(li.innerText));
 
 console.log(
-  document.querySelectorAll(".item-list ul li:nth-child(4)").innerText
+  document.querySelectorAll("section ul li:nth-child(3)")[0].innerText
 );
