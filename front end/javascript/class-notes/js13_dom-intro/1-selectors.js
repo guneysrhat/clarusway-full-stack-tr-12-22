@@ -93,3 +93,19 @@ document.querySelector("#btn").style.cursor = "pointer";
 
 const itemH2 = document.querySelector(".item-list h2");
 itemH2.style.color = "purple";
+
+const myBtn = document.querySelector("input[type= 'button']");
+console.log(myBtn);
+
+//* ========================================
+//*              QUERYSELECTORALL()
+//* ========================================
+
+const lists = document.querySelectorAll("ul li");
+console.log(lists); //? nodolist
+
+lists.forEach((li) => console.log(li.innerText));
+
+console.log(
+  document.querySelectorAll(".item-list ul li:nth-child(4)").innerText
+);
