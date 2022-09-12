@@ -40,19 +40,22 @@ document.getElementById("btn").addEventListener("click", function () {
   input.value = "";
 });
 
-//* EXAMPLE-2
+//* EXAMPLE-3
 //* -------------------------------------------------
 const list = document.querySelectorAll(".list"); //?nodelist
 
 list.forEach((li) => {
+  li.style.transition = "all 0.8s";
+  li.style.lineHeight = "2rem";
+
   li.onmouseover = () => {
     li.style.fontSize = "2rem";
-    li.style.transition = "0.5s";
+    li.style.transform = "translateX(10px)";
   };
 
   li.onmouseout = () => {
     li.style.fontSize = "1rem";
-    li.style.transition = "0.5s";
+    li.style.transform = "translateX(-10px)";
   };
 });
 
