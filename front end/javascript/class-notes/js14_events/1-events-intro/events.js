@@ -59,6 +59,13 @@ list.forEach((li) => {
   };
 });
 
+//* EXAMPLE-4 (onload)
+//* -------------------------------------------------
+
+window.onload = function () {
+  document.querySelector("#input").focus();
+};
+
 const print = () => {
   console.log("Starting");
 };
