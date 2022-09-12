@@ -25,8 +25,24 @@ deleteBtn.addEventListener("click", () => {
   newUl.childElementCount > 0
     ? newUl.removeChild(newUl.lastElementChild)
     : alert("There is no item to delete");
-  newUl.removeChild(newUl.lastElementChild);
 });
+
+//? enter key event handler
+langInput.addEventListener("keydown", (event) => {
+  //   console.log(event);
+  //   console.log(event.target);
+  //   console.log(event.keyCode);
+  //   console.log(event.code);
+
+  if (event.keyCode === 13) {
+    addBtn.click();
+  }
+  if (event.code === "Delete") {
+    deleteBtn.click();
+  }
+});
+
+//? del key event handler
 
 //? onLoad event handler
 window.addEventListener("load", () => {
