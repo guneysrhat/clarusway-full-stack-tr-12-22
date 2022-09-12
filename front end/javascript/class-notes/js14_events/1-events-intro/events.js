@@ -39,3 +39,25 @@ document.getElementById("btn").addEventListener("click", function () {
 
   input.value = "";
 });
+
+//* EXAMPLE-2
+//* -------------------------------------------------
+const list = document.querySelectorAll(".list"); //?nodelist
+
+list.forEach((li) => {
+  li.onmouseover = () => {
+    li.style.fontSize = "2rem";
+    li.style.transition = "0.5s";
+  };
+
+  li.onmouseout = () => {
+    li.style.fontSize = "1rem";
+    li.style.transition = "0.5s";
+  };
+});
+
+const print = () => {
+  console.log("Starting");
+};
+
+print();
