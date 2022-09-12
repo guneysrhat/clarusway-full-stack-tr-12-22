@@ -20,6 +20,15 @@ addBtn.addEventListener("click", () => {
   langInput.focus();
 });
 
+//?deleteBtn event handler
+deleteBtn.addEventListener("click", () => {
+  newUl.childElementCount > 0
+    ? newUl.removeChild(newUl.lastElementChild)
+    : alert("There is no item to delete");
+  newUl.removeChild(newUl.lastElementChild);
+});
+
+//? onLoad event handler
 window.addEventListener("load", () => {
   langInput.focus();
 });
