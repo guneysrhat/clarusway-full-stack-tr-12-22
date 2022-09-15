@@ -31,14 +31,14 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: right 5s linear infinite;
+  /* animation: right 5s linear infinite; */
 }
 
 .car {
   position: absolute;
   bottom: 105px;
   left: 40%;
-  animation: pop-up 0.8s linear infinite;
+  /* animation: pop-up 0.8s linear infinite; */
 }
 
 /**** Animation *****/
@@ -57,4 +57,11 @@ body {
   100% {
     transform: translateY(1px);
   }
+}
+
+.right {
+  animation: right 5s linear infinite;
+}
+.pop-up {
+  animation: pop-up 0.8s linear infinite;
 }
