@@ -1,1 +1,23 @@
 /******* ANIMATION INTRO *******/
+
+.outer {
+  background-color: purple;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+.inner {
+  background-color: cadetblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 1s ease-in-out, background-color 1s;
+  /* transition: transform 1s cubic-bezier(0.95, 0.15, 0.6, 0.84); */
+}
+
+.outer:hover .inner {
+  transform: translateX(100%);
+  background-color: chartreuse;
+
+  animation: travel 1s ease-in-out;
+}
+
