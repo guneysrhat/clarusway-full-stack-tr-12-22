@@ -11,7 +11,7 @@
   max-width: 600px;
   margin: auto;
   text-align: center;
-  animation: dropdown 4s ease-in-out forwards;
+  animation: dropdown 4s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
   position: absolute;
 }
 
@@ -40,5 +40,14 @@
   }
   100% {
     top: -200px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
