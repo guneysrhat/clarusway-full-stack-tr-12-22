@@ -1,1 +1,44 @@
 /******* DROP-DOWN ANIMATION *******/
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: lightgrey;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  animation: dropdown 4s ease-in-out forwards;
+  position: absolute;
+}
+
+.card button {
+  border: none;
+  padding: 1rem;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 7rem;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: rgb(135, 11, 11);
+}
+
+@keyframes dropdown {
+  0% {
+    top: -200px;
+  }
+  30% {
+    top: 40vh;
+  }
+  75% {
+    top: 40vh;
+  }
+  100% {
+    top: -200px;
+  }
+}
