@@ -37,12 +37,24 @@ body {
 .car {
   position: absolute;
   bottom: 105px;
-  left: 50%;
+  left: 40%;
+  animation: pop-up 0.8s linear infinite;
 }
 
 /**** Animation *****/
 @keyframes right {
   100% {
     transform: translate(-2000px);
+  }
+}
+@keyframes pop-up {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1px);
   }
 }
