@@ -11,3 +11,7 @@
 //? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
 
 console.log("FETCH");
+
+fetch("https://api.github.com/users")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
