@@ -19,4 +19,25 @@
 //* Senkron
 //* ------------------------------------------------
 
-console.log("Timeout-Interval");
+// const bekle = (waitingTime) => {
+//   const startTime = new Date().getTime();
+//   while (new Date().getTime() < startTime + waitingTime) {}
+// };
+
+// console.log("Hello");
+// //alert("CW"); //! blocking code
+
+// console.time("timer");
+
+// bekle(3000);
+// console.timeEnd("timer");
+// console.log("FS-12");
+
+//* Asenkron (setTimeout)
+//* ------------------------------------------------
+console.log("Timeout");
+setTimeout(() => {
+  //! non-blocking
+  console.log("Hi");
+}, 2000);
+console.log("timeout bitti");
