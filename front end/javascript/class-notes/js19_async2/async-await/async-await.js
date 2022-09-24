@@ -18,11 +18,27 @@
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
-
 const getNews = async function () {
-    const API_KEY = "c0180d3f34234b9a8e58dca47ef87c47"
+  const API_KEY = "c0180d3f34234b9a8e58dca47ef87c47";
 
-    const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY 
+  const url =
+    "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + API_KEY;
 
-    const res 
-}
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new error(`Someting went wrong ${res.status} `);
+    }
+    const data = await res.json();
+    console.log(data.articles);
+    renderNews(data.articles);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const renderNews = (news) => {
+    
+};
+
+window.addEventListener("load", getNews);
