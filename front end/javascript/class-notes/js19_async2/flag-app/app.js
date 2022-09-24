@@ -38,7 +38,7 @@ const renderCountries = (data) => {
     region,
   } = data[0];
   countryDiv.innerHTML += `
-  <div class="card" style="width: 18rem;">
+  <div class="card mx-auto m-3 shadow-lg" style="width: 18rem;">
   <img src="${svg}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${common}</h5>
@@ -49,9 +49,9 @@ const renderCountries = (data) => {
     <li class="list-group-item"><i class="fa-solid fa-comments"></i> ${Object.values(
       languages
     )}</li>
-    <li class="list-group-item"><i class="fas fa-lg fa-money-bill-wave"></i>${Object.values(
-      currencies
-    )}</li>
+    <li class="list-group-item"><i class="fas fa-lg fa-money-bill-wave"></i> ${
+      Object.values(currencies)[0].name
+    } ${Object.values(currencies)[0].symbol}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Card link</a>
