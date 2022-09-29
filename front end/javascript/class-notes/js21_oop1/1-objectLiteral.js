@@ -28,7 +28,9 @@ const book2 = {
   },
 };
 
+//? Object literals yontemi ile fazla sayida yeni objeler olusturmak oldukca zahmetlidir.
+//?Ayrica programcilik yaklasimi acisindan da cok tekrar icerdigi icin uygun degildir.
+//? (DRY-Don't repaet Yourself)
+//? Cozum: Object Oriented Programming (ES5 amd ES6)
 console.log(book2);
 console.log(book2.getSummary());
-
-
