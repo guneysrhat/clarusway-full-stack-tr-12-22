@@ -78,6 +78,7 @@ function Magazine(title, author, year, month) {
 //! Prototipleri miras almak icin Object.create() metodu kullanabilir.
 Magazine.prototype = Object.create(Book.prototype);
 
+//? Magazine objesinin yeni bir instance
 const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
 console.log(mag1);
 

@@ -34,10 +34,8 @@ class Book {
   }
 }
 
-
-
 //?instance
-const book2 = new Book("Sinekli Bakkal", "H. Edip Adıvar", 1930);
+const book1 = new Book("Kasagi", "Omer Seyfettin", 1920);
 
 console.log(book1);
 console.log(book1.getAge());
@@ -45,4 +43,14 @@ console.log(book1.getSummary());
 
 //? Sub-Class tanimlamasi (Inheritance)
 
-class
+class Magazine extends Book {
+  constructor(title, author, year, month) {
+    //! Book'un constructor'i cagrildi
+    super(title, author, year); //! Book'un prototpye kopyalanmis
+    this.month = month;
+  }
+}
+
+//? Magazine objesinin yeni bir instance
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
+console.log(mag1);
