@@ -1,7 +1,7 @@
 <p>Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# Project-004 : Weather_Condition_App (JS-04)
+# Project-006 : Weather_Condition_App (JS-06)
 
 ## Description
 Project aims to display current weather data of searched city around the world with fetching Weather Api data.
@@ -31,6 +31,4 @@ User story;
 
 🔥 You can use [OpenWeather Api](https://openweathermap.org/) for your app. 
 
-
-
-<p align="center"> ✍ Happy Coding ⌛ <p>
+🔥 You don’t need to create a new template for this project, you can use [Weather Condition_App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/006%20-%20Weather_Condition_App(JS-06)) template for html and css. We will be concerned in javascript side.
