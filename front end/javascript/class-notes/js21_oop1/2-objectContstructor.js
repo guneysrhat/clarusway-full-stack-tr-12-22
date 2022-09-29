@@ -50,7 +50,6 @@ Book.prototype.price = 100;
 //* Ornegin Book nesnesinin tum instance'lari getAge() fonksiyonunu miras alabilir.
 //* Ancak, getAge() fonksiyonu bellekte sadece bir yer kaplamaktadir.
 
-
 //* Bir nesnenin prototiplerine .prototype ile erisilebilir.
 //* Ancak bir instance'in prototiplerine .__proto__ ile erisilmektedir.
 
@@ -65,3 +64,21 @@ console.log(book1, book2);
 console.log(book1, book2);
 console.log(book1.getAge());
 console.log(book2.getAge());
+
+//? INHERITANCE (Kalitim --ES5)
+//?-------------------------------------------------------------
+
+//? Sub-Class
+
+function Magazine(title, author, year, month) {
+  Book.call(this, title, author, year);
+  this.month = month;
+}
+Magazine.prototype = Object.create(Book.prototype);
+
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
+console.log(mag1);
+
+
+
+console.log(mag1.getSummary());
