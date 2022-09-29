@@ -34,3 +34,5 @@ const book2 = {
 //? Cozum: Object Oriented Programming (ES5 amd ES6)
 console.log(book2);
 console.log(book2.getSummary());
+
+
