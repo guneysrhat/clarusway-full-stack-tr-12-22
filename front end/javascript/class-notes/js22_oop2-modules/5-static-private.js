@@ -22,3 +22,18 @@
 
 //! Private metotlara ise class disirasindan da eriselemez.
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebilir.
+
+
+class Book {
+    constructor(title, author, year) {
+      this.author = author;
+      this.title = title;
+      this.year = year;
+  
+      //? Bu alanda yazilan bir metot butun instance'ların belleginde tek tek yer kaplar.
+      this.getTitle = function () {
+        return this.title;
+      };
+    }
+  
+  
