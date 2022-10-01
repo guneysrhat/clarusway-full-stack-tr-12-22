@@ -23,17 +23,48 @@
 //! Private metotlara ise class disirasindan da eriselemez.
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebilir.
 
-
 class Book {
-    constructor(title, author, year) {
-      this.author = author;
-      this.title = title;
-      this.year = year;
-  
-      //? Bu alanda yazilan bir metot butun instance'ların belleginde tek tek yer kaplar.
-      this.getTitle = function () {
-        return this.title;
-      };
-    }
-  
-  
+  //? Private property
+  #id = "123456";
+  constructor(title, author, year) {
+    this.author = author;
+    this.title = title;
+    this.year = year;
+
+    this.getTitle = function () {
+      return this.title;
+    };
+  }
+
+  //? Class icerisinde public metotlar yardimiyla private degiskenler okunabilir.
+  //? Bu tip metotlara getter metot denilir.
+  //! getter metotlari class icerisinde tanimlanmalidir.
+  getId() {
+    return this.#id;
+  }
+
+  //? Class icerisinde public metotlar yardimiyla private degiskenlere yazilabilir.
+  //? Bu tip metotlara setter metot denilir.
+  //! setter metotlar class icerisinde tanimlanmalidir.
+  setId(id) {
+    this.#id = id;
+  }
+}
+
+const book1 = new Book("Simyaci", "Poelho Coelgo", 1988);
+
+console.log(book1.title);
+
+//? Private bir degiskenin degeri class disindan dogrudan okunamaz.
+// console.log(book1.#id);
+
+//? Private bir degiskenin degeri class disindan dogrudan degistirilemez
+// book1.#id = "11111";
+
+//! Private field '#id' must be declared in an enclosing class (at 5-static-private.js:42:18)
+//? Private degiskeni okuma
+console.log(book1.getId());
+
+//? Private degiskene deger atama
+book1.setId("00000");
+console.log(book1.getId());
