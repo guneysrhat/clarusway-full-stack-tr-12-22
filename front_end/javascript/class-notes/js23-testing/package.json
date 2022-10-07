@@ -1,22 +1,14 @@
 {
-  "name": "clarusway-full-stack-tr-12-22",
+  "name": "js23-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guneysrhat/clarusway-full-stack-tr-12-22.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/guneysrhat/clarusway-full-stack-tr-12-22/issues"
-  },
-  "homepage": "https://github.com/guneysrhat/clarusway-full-stack-tr-12-22#readme",
   "devDependencies": {
     "jest": "^29.1.2"
   }

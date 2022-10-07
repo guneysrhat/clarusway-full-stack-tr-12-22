@@ -112,9 +112,9 @@ const getWeatherDataFromApi = async () => {
 
             //Jquery Samples
             // $(".city img").click((e)=>{
-            //     //getAttribute, setAttribute ==> attr
+                 //getAttribute, setAttribute ==> attr
             //     window.location.href = $(e.target).attr("src");
-            //     //$(e.target).attr("src", iconUrlAWS);
+                 //$(e.target).attr("src", iconUrlAWS);
             // });
 
             //Animation
