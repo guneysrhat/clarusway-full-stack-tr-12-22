@@ -1,7 +1,7 @@
-//* Harici bir dosya icerisinde olusturulan bir component
-//*export default ile proje icerisinde herhangi bir yerde
-//* kullanima acilmis olur. Kullanmak icin hedef
-//* dosyada import ... from "./..." ile import yapmak yeterlidir.
+//* Harici bir dosya icersinde olusturulan bir component
+//* export default ile proje icerisinde herhangi bir yerde
+//* kullanima kullanima acimiş olur. Kullanmak icin hedef
+//* dosyada import .... from "./..." ile import yapmak yeterlidir.
 
 import React from "react";
 
