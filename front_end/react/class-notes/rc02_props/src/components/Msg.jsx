@@ -8,6 +8,9 @@ const Msg = ({ name, age }) => {
       <h3>
         Merhaba {name} {age}
       </h3>
+      {/* <h3>
+        Merhaba {props.name}
+      </h3> */}
     </div>
   );
 };
