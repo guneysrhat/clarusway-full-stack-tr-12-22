@@ -13,7 +13,7 @@ function App() {
         const { id, language, img, btnName } = item; //! destr.
         return <Card key={id} language={language} img={img} btn={btnName} />;
       })}
-      <Card />
+      
     </>
   );
 }
