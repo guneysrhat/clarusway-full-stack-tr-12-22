@@ -1,5 +1,13 @@
+import Buton from "../buton/Buton";
 import "./Card.css";
 
-export const Card = () => {
-  return <div>Card</div>;
+const Card = () => {
+  return (
+    <div>
+      Card
+      <Buton />
+    </div>
+  );
 };
+
+export default Card;
