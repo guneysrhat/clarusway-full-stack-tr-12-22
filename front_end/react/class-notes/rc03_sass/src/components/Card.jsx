@@ -1,5 +1,7 @@
-const Card = () => {
-  return <h1>Card</h1>;
+const Card = ({data}) => {
+  return <div className=>
+
+  </div>;
 };
 
 export default Card;
