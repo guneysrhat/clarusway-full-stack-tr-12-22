@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-const Form = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const FormObject = () => {
+  const [formValues, setFormValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  //? destr
+  const { username, password, email } = formValues;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,19 +18,21 @@ const Form = () => {
           email:${email},
           password:${password}
     `);
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    setFormValues({
+      username: "",
+      email: "",
+      password: "",
+    });
   };
-
-  const handleUsername = (e) => {
+  const handleForm = (e) => {
     console.log(e.target.value);
-    setUsername(e.target.value);
+    console.log(e.target.id);
+    setFormValues({ ...formValues, [e.target.id]: e.target.value });
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1 className="display-5 text-danger">FORMS</h1>
+      <h1 className="display-5 text-danger">FORM OBJECT</h1>
 
       <div className="mb-3">
         <label htmlFor="username" className="form-label">
@@ -36,7 +43,7 @@ const Form = () => {
           className="form-control"
           id="username"
           value={username}
-          onChange={handleUsername}
+          onChange={handleForm}
         />
       </div>
       <div className="mb-3">
@@ -48,7 +55,7 @@ const Form = () => {
           className="form-control"
           id="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleForm}
         />
       </div>
       <div className="mb-3">
@@ -60,7 +67,7 @@ const Form = () => {
           className="form-control"
           id="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleForm}
         />
       </div>
 
@@ -71,4 +78,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormObject;
