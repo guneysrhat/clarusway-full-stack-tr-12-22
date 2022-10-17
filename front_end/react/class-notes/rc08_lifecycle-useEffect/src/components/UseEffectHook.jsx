@@ -33,11 +33,22 @@ import { useState, useEffect } from "react";
 const UseEffectHook = () => {
   const [count, setCount] = useState(0);
 
-useEffect(() => {
-  console.log("Mounting");
-
- 
-}, [])
+  //? componentDidMount
+  //! fetch, asyn-await, localStorage, setTimeout, setInterval();
+  // useEffect(() => {
+  //   console.log("Mounting");
+  //   setTimeout(() => {
+  //     alert("Data Fetched");
+  //   }, 3000);
+  // }, []);
+  //? componentDidMount  + componentDidUpdate
+  
+  useEffect(() => {
+    console.log("Mounting+Updating");
+    setTimeout(() => {
+      alert("Data Fetched");
+    }, 3000);
+  }, [count]);
 
 console.log("Rendering")
   return (
