@@ -47,9 +47,10 @@ class LifeCycleMethods extends React.Component {
     console.log("Updated");
     // console.log(prevState.count);
   }
- //! 5-) Bir component DOM agacindan kaldirildiktan hemen sonra cagrilir.
-  componentWillUnmount(){
-    console.log("Unmounted")
+
+  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
+  componentWillUnmount() {
+    console.log("Unmounted");
   }
 
   render() {
