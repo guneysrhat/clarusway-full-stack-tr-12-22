@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
 
-const AddTutorial = () => {
+const AddTutorial = ({ getTutorials }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const newTutor = { title, description };
+    addTutorial(newTutor);
   };
 
   //! POST- CRUD (Create)
@@ -17,6 +19,7 @@ const AddTutorial = () => {
     } catch (error) {
       console.log(error);
     }
+    getTutorials();
   };
 
   return (

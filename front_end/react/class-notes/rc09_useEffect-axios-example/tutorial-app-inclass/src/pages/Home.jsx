@@ -4,35 +4,29 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-const [tutorials, setTutorials] = useState([])
+  const [tutorials, setTutorials] = useState([]);
 
-  const url ="https://cw-axios-example.herokuapp.com/api/tutorials";
-
+  const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
 
   //? CRUD: (GET-READ)
-  const getTutorials = async () =>{
-    try{
-      const {data} = await axios(url)
-      console.log(data)
-      setTutorials(data)
-    }catch(error){
+  const getTutorials = async () => {
+    try {
+      const { data } = await axios(url);
+      console.log(data);
+      setTutorials(data);
+    } catch (error) {
       console.log(error);
     }
-    
-  }
+  };
   //? didmount
   useEffect(() => {
-    
-    getTutorials()
-    return () => {
-      
-    }
-  }, [])
-  
- 
+    getTutorials();
+    return () => {};
+  }, []);
+
   return (
     <>
-      <AddTutorial />
+      <AddTutorial getTutorials={getTutorials} />
       <TutorialList tutorials={tutorials} />
     </>
   );
