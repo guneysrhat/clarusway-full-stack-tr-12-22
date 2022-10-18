@@ -15,7 +15,7 @@ import axios from "axios";
 //   },
 // ];
 
-const TutorialList = ({ tutorials }) => {
+const TutorialList = ({ tutorials, getTutorials }) => {
   const deleteTutorial = async (id) => {
     const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
 
@@ -24,6 +24,7 @@ const TutorialList = ({ tutorials }) => {
     } catch (error) {
       console.log(error);
     }
+    getTutorials();
   };
 
   return (
