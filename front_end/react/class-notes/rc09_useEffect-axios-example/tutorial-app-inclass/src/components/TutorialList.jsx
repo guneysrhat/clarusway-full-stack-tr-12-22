@@ -16,11 +16,24 @@ import axios from "axios";
 // ];
 
 const TutorialList = ({ tutorials, getTutorials }) => {
+  //! DELETE (CRUD = Delete )
   const deleteTutorial = async (id) => {
     const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
 
     try {
       await axios.delete(`${url}/${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
+  //! PUT (CRUD = Update )
+  //! PUT : Whole update, PATCH : Partially Update
+  const editTutorial = async (item) => {
+    const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
+
+    try {
+      await axios.put(`${url}/${item.id}`);
     } catch (error) {
       console.log(error);
     }
@@ -53,6 +66,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    onClick={() => editTutorial(item)}
                   />
                   <AiFillDelete
                     size={22}
