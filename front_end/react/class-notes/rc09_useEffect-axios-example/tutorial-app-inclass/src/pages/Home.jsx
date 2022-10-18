@@ -18,16 +18,16 @@ const Home = () => {
       console.log(error);
     }
   };
+
   //? didmount
   useEffect(() => {
     getTutorials();
-    return () => {};
   }, []);
 
   return (
     <>
       <AddTutorial getTutorials={getTutorials} />
-      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
+      <TutorialList tutor={tutorials} getTutorials={getTutorials} />
     </>
   );
 };
