@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 //! }, []);
 
 //! useEffect(() => {
-//*   */ componentDidUpdate code */
+//*   */ ComponentDidMount + componentDidUpdate code */
 //! }, [var1, var2]);
 
 //! useEffect(() => {
@@ -28,13 +28,13 @@ import { useState, useEffect } from "react";
 //!   return () => {
 //*     //* componentWillUnmount code */
 //!   };
-//! }, [var1, var2]);   //? Dependency Array // arrayin ici bos olursa componenentDidMount olarak => dolu olursa companentDidUpdate olarak calisir
+//! }, [var1, var2]); //? Dependency Array
 
 const UseEffectHook = () => {
   const [count, setCount] = useState(0);
 
   //? componentDidMount
-  //! fetch, asyn-await, localStorage, setTimeout, setInterval();
+  //! fetch, asyn-await ,localStorage, setTimeout, setInterval();
   // useEffect(() => {
   //   console.log("Mounting");
   //   setTimeout(() => {
@@ -42,34 +42,32 @@ const UseEffectHook = () => {
   //   }, 3000);
   // }, []);
 
-
-  //? componentDidMount  + componentDidUpdate
+  //?componentDidMount + componentDidUpdate
   // useEffect(() => {
   //   console.log("Mounting + Updating");
   //   setTimeout(() => {
   //     alert("Data Fetched");
-  //   }, 3000);
+  //   }, 1000);
   // }, [count]);
 
-    //? componentDidUnmount
-    const fetchData= () => {
-      console.log("Data Fatched")
-    }
-    useEffect(() => {
-      //! componentDidMount
-      const timerId = setInterval(fetchData,1000)
-      console.log("Mounting");
-    
-      return () => {
-        //! componentDidUnmount
-        clearInterval(timerId)
-        console.log("Unmounting")
-      }
-    }, [])
-    
+  //?componentDidUnmount
+  const fetchData = () => {
+    console.log("Data Fetched");
+  };
 
+  useEffect(() => {
+    //! ComponentDidMount
+    const timerId = setInterval(fetchData, 1000);
+    console.log("Mounting");
 
-console.log("Rendering")
+    return () => {
+      //! componentWillUnmount
+      clearInterval(timerId);
+      console.log("Unmounting");
+    };
+  }, []);
+
+  console.log("Rendering");
   return (
     <div className="container text-center">
       <h1 className="text-danger">USE EFFECT</h1>
