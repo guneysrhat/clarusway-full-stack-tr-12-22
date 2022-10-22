@@ -19,26 +19,46 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link active" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && "red" })}
+                to="/"
+                className="nav-link active"
+                aria-current="page"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link to="/people" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && "red" })}
+                to="/people"
+                className="nav-link"
+                aria-current="page"
+              >
                 People
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link to="/paths" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && "red" })}
+                to="/paths"
+                className="nav-link"
+                aria-current="page"
+              >
                 Paths
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && "red" })}
+                to="/contact"
+                className="nav-link"
+                aria-current="page"
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
