@@ -1,14 +1,16 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <ul>
       <li>
-        <a href="/">Home</a>
+        <Link href="/">Home</Link>
       </li>
       <li>
-        <a href="/instructors">Instructors</a>
+        <Link href="/instructors">Instructors</Link>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <NavLink href="/contact">Contact</NavLink>
       </li>
     </ul>
   );
