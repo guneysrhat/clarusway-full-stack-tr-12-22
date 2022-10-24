@@ -10,7 +10,7 @@ const NotFound = () => {
         <button onClick={() => navigate("/")} className="btn btn-success me-2">
           Home
         </button>
-        <button onClick={() => navigate("-1")} className="btn btn-warning">
+        <button onClick={() => navigate(-1)} className="btn btn-warning">
           Go Back
         </button>
       </div>
