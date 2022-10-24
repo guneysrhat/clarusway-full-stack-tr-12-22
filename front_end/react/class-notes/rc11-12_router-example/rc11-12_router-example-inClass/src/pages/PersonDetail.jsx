@@ -1,14 +1,19 @@
-import { useLocation, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 const PersonDetail = () => {
   const navigate = useNavigate();
+
+  //! Linkteki parametreyi almak icin useParams Hook'u kullanilabilir.
   const { id } = useParams();
   console.log(id);
-  //   const { state: person } = useLocation();
-  //   console.log(person);
-  const [person, setPerson] = useState([]);
+
+  //! navigate ile gonderilen state'i yakalamak icin useLocation Hook'u kullanilabilir.
+  //! Bu durumda veri, state ile geldigi icin yeniden fetch yapilmasina gerek kalmaz
+  // const { state: person } = useLocation();
+  // console.log(person);
+
+  const [person, setPerson] = useState("");
 
   useEffect(() => {
     fetch(`https://reqres.in/api/users/${id}`)
@@ -16,6 +21,9 @@ const PersonDetail = () => {
       .then((data) => setPerson(data.data))
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(person);
+
   return (
     <div className="container text-center">
       <h3>
@@ -24,10 +32,10 @@ const PersonDetail = () => {
       <img className="rounded" src={person?.avatar} alt="" />
       <p>{person?.email}</p>
       <div>
-        <button className="btn btn-success me-2" onClick={() => navigate("/")}>
-          Home
+        <button onClick={() => navigate("/")} className="btn btn-success me-2">
+          Go Home
         </button>
-        <button className="btn btn-warning" onClick={() => navigate(-1)}>
+        <button onClick={() => navigate(-1)} className="btn btn-warning">
           Go Back
         </button>
       </div>
