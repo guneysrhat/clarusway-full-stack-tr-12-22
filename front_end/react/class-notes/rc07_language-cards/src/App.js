@@ -4,10 +4,13 @@ import Header from "./component/Header";
 
 const App = () => {
   return (
-  <Container className="">
-    <Header />
-    <Card/>
-  </Container>
+    <Container
+      className="text-center mt-4 p-4"
+      
+    >
+      <Header />
+      <Card />
+    </Container>
   );
 };
 
