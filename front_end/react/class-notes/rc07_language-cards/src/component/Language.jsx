@@ -6,9 +6,10 @@ const Language = ({ name, img, options }) => {
   const [showImage, setShowImage] = useState(true);
   return (
     <Container
-      className="rounded-4 p-4 "
+      className="rounded-4 p-4 h-100"
       style={{ background: "peachpuff" }}
       onClick={() => setShowImage(!showImage)}
+      type="button"
     >
       {showImage && (
         <Container>
@@ -18,9 +19,9 @@ const Language = ({ name, img, options }) => {
       )}
       {!showImage && (
         <Container>
-          <ul>
+          <ul className="h-100 d-flex flex-column justify-content-center">
             {options.map((item) => {
-              return <li>{item}</li>;
+              return <li className="h5 text-start">{item}</li>;
             })}
           </ul>
         </Container>
