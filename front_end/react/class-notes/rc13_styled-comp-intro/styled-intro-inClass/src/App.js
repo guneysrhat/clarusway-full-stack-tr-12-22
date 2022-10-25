@@ -1,7 +1,13 @@
+import { TomatoButton } from "./components/Button.styled";
+import { Button } from "./components/Button.styled";
+
 const App = () => {
   return (
     <>
-      <h1>Styled Components</h1>
+      <Button primary>Save</Button>
+      <Button>Click</Button>
+      <TomatoButton>Send</TomatoButton>
+      <TomatoButton primary>Submit</TomatoButton>
     </>
   );
 };
