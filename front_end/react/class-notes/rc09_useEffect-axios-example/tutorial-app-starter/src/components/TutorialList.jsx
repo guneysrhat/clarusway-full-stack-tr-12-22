@@ -1,5 +1,6 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
 
 // const tutorials = [
 //   {
@@ -14,7 +15,20 @@ import { AiFillDelete } from "react-icons/ai";
 //   },
 // ];
 
-const TutorialList = ({ tutorials }) => {
+const TutorialList = ({ tutorials, getTutorials }) => {
+  const deleteTutorial = async ({ id, title, description }) => {
+    try {
+      const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
+      const { data } = await axios.delete(`${url}/${id}`, {
+        title,
+        description,
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -46,6 +60,7 @@ const TutorialList = ({ tutorials }) => {
                     size={22}
                     type="button"
                     className="text-danger "
+                    onClick={() => deleteTutorial(item)}
                   />
                 </td>
               </tr>
