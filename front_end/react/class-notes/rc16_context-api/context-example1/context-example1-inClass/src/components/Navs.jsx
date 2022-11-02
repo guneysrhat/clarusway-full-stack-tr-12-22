@@ -8,7 +8,7 @@ import { LoginContext } from "../context/loginContext";
 
 function Navs() {
   //! Consuming
-  const { user } = useContext(LoginContext);
+  const { user, setUser } = useContext(LoginContext);
   return (
     <Navbar expand="md">
       <Container>
@@ -38,7 +38,11 @@ function Navs() {
                 Login
               </Link>
             ) : (
-              <Link className="nav-link" to="/login">
+              <Link
+                onClick={() => setUser({ email: "", password: "" })}
+                className="nav-link"
+                to="/login"
+              >
                 Logout
               </Link>
             )}
