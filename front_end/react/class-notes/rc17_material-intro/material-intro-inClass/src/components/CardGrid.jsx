@@ -17,7 +17,7 @@ export default function CardGrid() {
         {data.map((card) => {
           const { id, text, img, name } = card;
           return (
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4} key={id}>
               <Card>
                 <CardActionArea>
                   <CardMedia component="img" image={img} alt="img" />
