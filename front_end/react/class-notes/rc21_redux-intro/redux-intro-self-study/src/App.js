@@ -7,14 +7,13 @@ import { store } from "./redux";
 // import reducer from "./redux";
 
 function App() {
-  
   // const store = createStore(reducer);
   return (
     <div className="app">
       <Provider store={store}>
         <Counter />
       </Provider>
-      {/* <Todo /> */}
+      <Todo />
     </div>
   );
 }
