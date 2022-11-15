@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { setUser } from "../features/authSlice";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(setUser());
+    dispatch(setUser({ email, password }));
     setEmail("");
     setPassword("");
     navigate("/");
