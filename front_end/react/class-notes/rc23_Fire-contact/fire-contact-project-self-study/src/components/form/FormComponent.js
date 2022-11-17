@@ -14,7 +14,13 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = () => {
+const FormComponent = ({ info, setInfo, handleSubmit }) => {
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setInfo({ ...info, [name]: value });
+    console.log(info);
+  };
   return (
     <Grid
       textAlign="center"
@@ -38,14 +44,15 @@ const FormComponent = () => {
       <h2 className="contact-header">Add Contact</h2>
 
       <Box style={{ backgroundColor: "white", padding: "20px" }}>
-        <form>
+        <form onSubmit={handleSubmit}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"
               name="username"
-              value={null}
-              onChange={null}
+              value={info.username}
+              onChange={handleChange}
               placeholder="Name"
+              required
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -57,9 +64,10 @@ const FormComponent = () => {
             <TextField
               variant="outlined"
               name="phoneNumber"
-              value={null}
-              onChange={null}
+              value={info.phoneNumber}
+              onChange={handleChange}
               placeholder="Phone Number"
+              required
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -74,8 +82,9 @@ const FormComponent = () => {
                 label="Gender"
                 name="gender"
                 variant="outlined"
-                value={null}
-                onChange={null}
+                required
+                value={info.gender}
+                onChange={handleChange}
               >
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Male">Male</MenuItem>
