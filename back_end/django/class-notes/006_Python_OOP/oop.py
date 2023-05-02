@@ -208,11 +208,38 @@ os.system('cls' if os.name=="nt" else 'clear')
 # personel.hello('Qadir','Adamson')
     
 # ---------------------------------------------
-#Double-Underscore Methods:  DunderMethods:
+#Double-Underscore Methods:  DunderMethods: __method__()
+#Python icin ozel anlam iceren methodlardir. Isimleri sabittir.
 
-class Person:
+# class Person:
 
-    name = 'Qadir'
-    surname = 'Adamson'
+#     name = 'Qadir'
+#     surname = 'Adamson'
     
+#     #Constructor Method:
+#     #Instance olusturuldugunda otamatik calisan method
+#     def __init__(self):
+#         self.name ='Rafe'
+#         self.surname = 'Stefano'
     
+#     #__str__ : instance default return.
+#     def __str__(self):
+#         #return 'Benim yazdigim classtan uretilmis yeni bir instance\'dir'
+#         return f'{self.name} {self.surname}'
+
+#     def ekrana_yaz(self):
+#         print(f'{self.name} {self.surname}' , "ekrana yaz icinde")
+    
+# print(Person.name, Person.surname)
+# personal = Person()
+# print(personal,"personal")
+# personal.ekrana_yaz()
+    
+# ---------------------------------------------
+
+from module import Module 
+
+print(dir(Module))
+isinstance =Module()
+print(isinstance)
+print(Module.__doc__)
