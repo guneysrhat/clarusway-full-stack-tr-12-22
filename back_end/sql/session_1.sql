@@ -75,3 +75,5 @@ WHERE	AlbumID=1;
 -- SELECT * FROM Customer WHERE Address LIKE '1498%'  -- "1498" ile başlayan kayıtlar.
 -- SELECT * FROM Customer WHERE Address LIKE '%langer'  -- "langer" ile biten kayıtlar.
 -- SELECT * FROM Customer WHERE Address LIKE '%rue%'  -- içinde "rue" geçen kayıtlar 
+
+
