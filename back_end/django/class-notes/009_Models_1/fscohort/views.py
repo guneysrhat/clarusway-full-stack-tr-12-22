@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def fscohort(request):
+    return HttpResponse('''
+        <h2>
+            Welcome to FSCohort
+        </h2>
+    ''')
+
+def goodbye(request):
+    return HttpResponse('GoodBye.')
