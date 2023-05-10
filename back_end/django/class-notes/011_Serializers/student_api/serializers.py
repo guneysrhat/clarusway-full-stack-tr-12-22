@@ -1,11 +1,12 @@
 from rest_framework import serializers
 from .models import Student
 
+
 # class StudentSerializer(serializers.Serializer):
-#     first_name =serializers.CharField(max_length=50)
-#     last_name =serializers.CharField(max_length=50)
+#     first_name = serializers.CharField(max_length=50)
+#     last_name = serializers.CharField(max_length=50)
 #     number = serializers.IntegerField()
-    
+
 #     def create(self, validated_data):
 #         return Student(**validated_data)
 
@@ -16,9 +17,10 @@ from .models import Student
 #         instance.save()
 #         return instance
     
+
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        # fields = ['number','first_name','last_name']
-        fields ='__all__'
-        # exclude = [''] #todo
+        # fields = ['number', 'first_name', 'last_name']
+        # fields = '__all__'
+        exclude = ['id']
