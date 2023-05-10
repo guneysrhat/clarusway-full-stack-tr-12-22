@@ -77,3 +77,74 @@ def student_update(request, pk):
             'messege':'Kayıt Güncellenemedi',
             'data':serializer.data
         },status=status.HTTP_400_BAD_REQUEST)
+        
+# -------------------------------------------------------------------
+#StudentSerializers Tek Kayit Silme
+
+@api_view(['DELETE'])
+def student_delete(request, pk):
+    student = get_object_or_404(Student, id=pk)
+    student.delete()
+    return Response({
+        'messege':'Kayıt Silindi'
+    },status=status.HTTP_204_NO_CONTENT)
+    
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+#Benzer Fonksiyonlari Birlestirme:
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+#Kayit Listeleme + Yeni Kayit Ekleme
+
+@api_view(['GET','POST'])
+def student_list_create(request):
+    if request.method == 'GET':
+        #Listeleme
+        students = Student.objects.all()
+        serializer = StudentSerializer(instance=students, many=True)
+        return Response(serializer.data)
+    else:
+        #Yeni Kayıt Ekleme
+        serializer = StudentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'messege':'Kayıt Eklendi'
+            },status=status.HTTP_201_CREATED)
+        else:
+            return Response({
+                'messege':'Kayıt Eklenemedi',
+                'data':serializer.data
+            },status=status.HTTP_400_BAD_REQUEST)
+            
+
+# -------------------------------------------------------------------
+#  Kayit Guoruntuleme + Guncelleme + Silme 
+
+@api_view(['GET','PUT','DELETE'])
+def student_detail_update_delete(request, pk):
+    student = get_object_or_404(Student, id=pk)
+    match request.method:
+        case 'GET':
+        #Tek kayit goruntuleme:
+            serializer = StudentSerializer(instance=student)
+            return Response(serializer.data)
+        case 'PUT':
+        #Tek kayit guncelleme:
+            serializer = StudentSerializer(instance=student, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({
+                    'messege':'Kayıt Güncellendi'
+                },status=status.HTTP_202_ACCEPTED)
+            else:
+                return Response({
+                    'messege':'Kayıt Güncellenemedi',
+                    'data':serializer.data
+                },status=status.HTTP_400_BAD_REQUEST)
+        case 'DELETE':
+        #Tek kayit silme:
+            student.delete()
+            return Response({
+                "messege":"Kayıt Silindi"
+            },status=status.HTTP_204_NO_CONTENT)
