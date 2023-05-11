@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from .models import Student
 
 
 # class StudentSerializer(serializers.Serializer):
@@ -18,7 +17,10 @@ from .models import Student
 #         return instance
     
 
+from .models import Student
+
 class StudentSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Student
         # fields = ['number', 'first_name', 'last_name']
