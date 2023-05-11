@@ -94,4 +94,56 @@ class StudentGPPD(APIView):
         student.delete()
         return Response({ "message": "Deleted" }, status=status.HTTP_204_NO_CONTENT)
 
+# ----------------------------------------------------------------
+# GenericAPIView
+# https://www.django-rest-framework.org/api-guide/generic-views/#genericapiview
+# Mixins
+# https://www.django-rest-framework.org/api-guide/generic-views/#mixins
+# ----------------------------------------------------------------
+from rest_framework.generics import GenericAPIView
+from rest_framework import mixins
+
+class StudentGenericListCreate(mixins.ListModelMixin, mixins.CreateModelMixin, GenericAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+    # Listeleme:
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
+
+    # Yeni Kayıt:
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+# ----------------------------------------------------------------
+# ListCreateAPIView
+# RetrieveUpdateDestroyAPIView
+# https://www.django-rest-framework.org/api-guide/generic-views/#concrete-view-classes
+# ----------------------------------------------------------------
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+
+# Kayıt Listeleme ve Yeni Kayıt Ekleme:
+class StudentListCreateAPIView(ListCreateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+# Tek kayıt görüntüle/güncelle/sil:
+class StudentRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+    # lookup_field = "id" # Default: "pk"
+    
+# ----------------------------------------------------------------
+# ModelViewSet:
+# https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
+# ----------------------------------------------------------------
+from rest_framework.viewsets import ModelViewSet
+
+# Tum islemler:
+class StudentMVS(ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+
+
 
