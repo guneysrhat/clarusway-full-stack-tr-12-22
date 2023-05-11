@@ -138,12 +138,16 @@ class StudentRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 # https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
 # ----------------------------------------------------------------
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
 
 # Tum islemler:
 class StudentMVS(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-
+    @action(methods=["GET"] , detail=False)
+    def count(self, request):
+        return Response({"count": Student.objects.count()})
+    
 
 
