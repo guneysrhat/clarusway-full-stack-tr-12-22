@@ -145,7 +145,7 @@ class StudentMVS(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-    @action(methods=["GET"] , detail=False)
+    @action(methods=["GET"] , detail=False, )
     def count(self, request):
         return Response({"count": Student.objects.count()})
     
