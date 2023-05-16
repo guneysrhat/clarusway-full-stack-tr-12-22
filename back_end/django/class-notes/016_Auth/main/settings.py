@@ -38,11 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Modules:
     'rest_framework',
     'django_filters',
+    'rest_framework.authtoken',
+
     # Apps:
     'todo',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -138,5 +142,11 @@ REST_FRAMEWORK = {
     #   'django_filters.rest_framework.DjangoFilterBackend', 
     #   'rest_framework.filters.SearchFilter',
     #   'rest_framework.filters.OrderingFilter'
+    # ]
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.authentication.BasicAuthentication',
     # ]
 }
